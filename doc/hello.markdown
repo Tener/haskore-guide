@@ -25,12 +25,12 @@ If we ignore all the imports, the meaning is pretty clear.
 All the source code in each tutorial is inside the src folder, so get this git repo
 	
 	git clone git://github.com/nfjinjing/haskore-guide.git
-	
+
 and run it.
 
 	cd haskore-guide
 	runghc src/hello.hs
-	
+
 This will output `test.mid` inside current path.
 
 ## [Next](c.markdown)

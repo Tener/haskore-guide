@@ -1,7 +1,7 @@
 C major
 ========
 
-There is a class of functions in Haskore that deal with chords, but we won't touch them yet.
+There is a class of functions in Haskore that deals with chords, but we won't touch them yet.
 
 Basic note combinators
 ----------------------
@@ -15,9 +15,11 @@ Questions:
 
 from Music
 
-	(+:+), (=:=) :: T note -> T note -> T note
-	infixr 7 +:+  {- like multiplication -}
-	infixr 6 =:=  {- like addition -}
+>	(+:+), (=:=) :: T note -> T note -> T note
+>
+>	infixr 7 +:+  {- like multiplication -}
+>
+>	infixr 6 =:=  {- like addition -}
 
 This vaguely seems to be what we are looking for.
 
@@ -39,15 +41,17 @@ Higher level helpers
 
 from Music
 
-	line, chord :: [T note] -> T note
-	line  = serial
-	chord = parallel
+>	line, chord :: [T note] -> T note
+>
+>	line  = serial
+>
+>	chord = parallel
 
-Can this be the helper that does what we just did? The answer is yes. In c_major.hs we have 
+Can these be the helpers that do what we just did? The answer is yes. In c_major.hs we have 
 
 	c_major = map (\x -> x 1 qn () ) [c, e, g]
 	c_parallel = chord c_major
-	
+
 It works exactly the same as folding on `(=:=)`.
 
 _Sweet_ :)
