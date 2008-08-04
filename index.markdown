@@ -2,6 +2,6 @@ Index
 ======
 
 
-## [Installation](0.markdown)
+## [Installation](install.markdown)
 
-## [Hello World](1.markdown)
+## [Hello World](hello.markdown)
