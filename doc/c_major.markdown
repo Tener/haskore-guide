@@ -6,7 +6,7 @@ There is a class of functions in Haskore that deal with chords, but we won't tou
 Basic note combinators
 ----------------------
 
-A naive approach is just some how make `[c, e, g]` sort of a melody, since that's what C major is. Duck typing would rock here :)
+A naive approach is just some how making `[C, E, G]` sort of a melody, since that's what C major is. Duck typing would rock here :)
 
 Questions:
 
@@ -50,4 +50,4 @@ Can this be the helper that does what we just did? The answer is yes. In c_major
 	
 It works exactly the same as folding on `(=:=)`.
 
-Neat :)
+_Sweet_ :)
