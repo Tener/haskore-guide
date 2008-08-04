@@ -19,9 +19,8 @@ The first thing is to output something, anything. So here is the demo file from 
 
 If we ignore all the imports, the meaning is pretty clear. 
 
-main: It output a `test.mid` file form a song. 
-
-song: The song is ( reading from right to left ) a chord, played by a piano, and exported in midi format.
+* main: It output a `test.mid` file from a song. 
+* song: The song is ( reading from right to left ) a chord, played by a piano, and exported in midi format.
 
 All the source code in each tutorial is inside the src folder, so get this git repo
 	
@@ -32,4 +31,4 @@ and run it.
 	cd haskore-guide
 	runghc src/hello.hs
 	
-Why not trying to playback the generated `test.mid` now?
+This will output `test.mid` inside current path.
