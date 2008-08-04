@@ -1,4 +1,4 @@
 A dummy's guide to Haskore
 =========================
 
-[Index](master/index.markdown)
+## [Index](master/index.markdown)

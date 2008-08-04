@@ -1,8 +1,6 @@
 Hello World
 ============
 
-Documentation on Haskore homepage seems to be outdated. So I'm writing this while experimenting.
-
 The first thing is to output something, anything. So here is the demo file from Haskore, we simply run it.
 
 	module GeneratedTest where
