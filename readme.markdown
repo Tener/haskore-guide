@@ -21,7 +21,6 @@ I recommend installing cabal-install in user space, so all your cabal packages d
 	cabal install midi
 	cabal install markov-chain
 	cabal install non-negative
-	cabal install record-access
 
 ### install custom-cabal packages
 
@@ -37,6 +36,7 @@ you need the following packages of exact versions
 	-- darcs url
 	
 	http://darcs.haskell.org/supercollider-ht/
+	http://darcs.haskell.org/record-access/
 
 ### install Haskore
 
@@ -51,3 +51,14 @@ The zip package on Haskore homepage won't work on ghc-6.8.3! You need the darcs 
 	http://darcs.haskell.org/haskore/ 
 	
 Hint: using the `partial` flag, or it takes forever.
+
+### Test install
+
+	ghci
+	:m + Haskore
+	
+If you can successfully import this module, everything is cool.
+
+I might miss some cabal dependencies, but they should be easily spotted when installing Haskore.
+
+[next](1.markdown)
