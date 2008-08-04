@@ -7,3 +7,5 @@ Index
 ## [Hello World](hello.markdown)
 
 ## [Note C](c.markdown)
+
+## [C Major](c_major.markdown)

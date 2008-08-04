@@ -109,3 +109,6 @@ and some neat transformers and applications
 	ddhn = doubleDotted hn  -- double-dotted half note
 	ddqn = doubleDotted qn  -- double-dotted quarter note
 	dden = doubleDotted en  -- double-dotted eighth note
+	
+	
+## [Next](c_major.markdown)
