@@ -1,7 +1,7 @@
 A dummy's guide to Haskore
 =========================
 
-## [Index](doc/index.markdown)
+## [Index](master/doc/index.markdown)
 
 	|
 	|
