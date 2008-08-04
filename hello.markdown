@@ -20,4 +20,7 @@ The first thing is to output something, anything. So here is the demo file from 
 If we ignore all the imports, the meaning is pretty clear. 
 
 main: It output a `test.mid` file form a song. 
+
 song: The song is ( reading from right to left ) a chord, played by a piano, and exported in midi format.
+
+Why not trying to playback the generated `test.mid` now?
