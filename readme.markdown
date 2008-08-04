@@ -61,4 +61,4 @@ If you can successfully import this module, everything is cool.
 
 I might miss some cabal dependencies, but they should be easily spotted when installing Haskore.
 
-[next](1.markdown)
+[./next](1.markdown)
