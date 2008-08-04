@@ -32,3 +32,5 @@ and run it.
 	runghc src/hello.hs
 	
 This will output `test.mid` inside current path.
+
+## [Note C](c.markdown)
