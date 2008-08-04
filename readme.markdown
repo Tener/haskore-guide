@@ -1,4 +1,4 @@
-A dummy guide to Haskore
+A dummy's guide to Haskore
 =========================
 
 
@@ -15,6 +15,8 @@ I recommend installing cabal-install in user space, so all your cabal packages d
 
 ### install stock-cabal packages
 
+	-- system commands
+	
 	cabal install event-list
 	cabal install midi
 	cabal install markov-chain
@@ -25,11 +27,15 @@ I recommend installing cabal-install in user space, so all your cabal packages d
 
 you need the following packages of exact versions
 
-	hsc3-0.1.1
-	hosc-0.1
+	-- fetch urls
+	
+	http://hackage.haskell.org/packages/archive/hosc/0.1.1/hosc-0.1.1.tar.gz
+	http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
 	
 ### install darcs packages
 
+	-- darcs url
+	
 	http://darcs.haskell.org/supercollider-ht/
 
 ### install Haskore
@@ -40,6 +46,8 @@ The zip package on Haskore homepage won't work on ghc-6.8.3! You need the darcs 
 
 #### using darcs 1.0.9 to get the repo and install
 
+	-- darcs url
+	
 	http://darcs.haskell.org/haskore/ 
 	
 Hint: using the `partial` flag, or it takes forever.
