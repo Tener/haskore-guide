@@ -29,9 +29,9 @@ you need the following packages of exact versions
 
 	-- fetch urls
 	
-	http://hackage.haskell.org/packages/archive/hosc/0.1.1/hosc-0.1.1.tar.gz
 	http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
-	
+	http://hackage.haskell.org/packages/archive/hsc3/0.1.1/hsc3-0.1.1.tar.gz
+		
 ### install darcs packages
 
 	-- darcs url
