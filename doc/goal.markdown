@@ -30,3 +30,60 @@ Let's play with it
 	render_to "test.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
 
 Now we have a one liner to generate simple music test :)
+
+
+Rests
+------
+
+You may have spotted the usage of `hnr`.
+
+from Music
+
+	rest :: Dur -> T note
+	rest d' = prim (Atom d' Nothing)
+	
+	bnr, wnr, hnr, qnr, enr, snr, tnr, sfnr :: T note
+	dwnr, dhnr, dqnr, denr, dsnr, dtnr      :: T note
+	ddhnr, ddqnr, ddenr                     :: T note
+	
+	bnr   = rest Duration.bn     -- brevis rest
+	wnr   = rest Duration.wn     -- whole note rest
+	hnr   = rest Duration.hn     -- half note rest
+	qnr   = rest Duration.qn     -- quarter note rest
+	enr   = rest Duration.en     -- eight note rest
+	snr   = rest Duration.sn     -- sixteenth note rest
+	tnr   = rest Duration.tn     -- thirty-second note rest
+	sfnr  = rest Duration.sfn    -- sixty-fourth note rest
+	
+	dwnr  = rest Duration.dwn    -- dotted whole note rest
+	dhnr  = rest Duration.dhn    -- dotted half note rest
+	dqnr  = rest Duration.dqn    -- dotted quarter note rest
+	denr  = rest Duration.den    -- dotted eighth note rest
+	dsnr  = rest Duration.dsn    -- dotted sixteenth note rest
+	dtnr  = rest Duration.dtn    -- dotted thirty-second note rest
+	
+	ddhnr = rest Duration.ddhn  -- double-dotted half note rest
+	ddqnr = rest Duration.ddqn  -- double-dotted quarter note rest
+	ddenr = rest Duration.dden  -- double-dotted eighth note rest
+
+The meaning is clear, a note can be silenced and it becomes a rest note.
+
+	rest d' = prim (Atom d' Nothing)
+
+This tells us that a rest note is what we get from the data type constructed by applying the Atom constructor to a duration and Nothing.
+
+	data Primitive note =
+          	Atom Dur (Atom note) -- a note or a rest
+     	deriving (Show, Eq, Ord)
+
+So the Atom constructor creates a Primitive note. However, this constructor is extremely confusing, since `Atom` is not only used as a data type constructor ( in former ), but also a type alias ( in latter ).
+
+	type Atom note = Maybe note
+	
+Finally `prim` is defined in 
+	
+	class Construct medium where
+	   prim :: a -> medium a
+
+
+FIXME: How `prim` converts a Primitive note into a Music.T note ?
