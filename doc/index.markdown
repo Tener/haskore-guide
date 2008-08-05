@@ -15,7 +15,8 @@ Index
 ## [Bach's Prelude 1 in C Major](bach_prelude.markdown)
 
 
-### Links
+Links
+======
 
 * [Haskore](http://www.haskell.org/haskore/)
 * [http://www.haskell.org/tmrwiki/Haskore](http://www.haskell.org/tmrwiki/Haskore)
