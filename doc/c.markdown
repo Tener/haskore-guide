@@ -133,6 +133,6 @@ from Melody
 	af = note' Af;  a = note' A;  as = note' As
 	bf = note' Bf;  b = note' B;  bs = note' Bs
 
-It's clear we can create any note using these generators. Interestingly, `cs == df` in terms of pitch on the same octave.
+It's clear we can create any note using these generators. Interestingly, `cs == df`.
 	
 ## [C Major](c_major.markdown)
