@@ -45,8 +45,8 @@ We want the melody type, so we tried
 and it works.
 
 
-c.midi
--------
+generate c.midi
+----------------
 
 	:l src/Snippet
 	
@@ -58,8 +58,8 @@ c.midi
 
 Try playback `c.midi`, awesome.
 
-c.hs
------
+using c.hs
+-----------
 
 You can also generate the midi file by
 

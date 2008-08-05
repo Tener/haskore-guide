@@ -18,13 +18,3 @@ A dummy's guide to Haskore
 	|
 	|
 	|
-	|
-	|
-	|
-	|
-	|
-	|
-	|
-	|
-	|
-	|

@@ -6,7 +6,7 @@ There is a class of functions in Haskore that deals with chords, but we won't to
 Basic note combinators
 ----------------------
 
-A naive approach is just some how making `[C, E, G]` sort of a melody, since that's what C major is. Duck typing would rock here :)
+A naive approach is some how making `[C, E, G]` sort of a melody, since that's what C major is. Duck typing would rock here :)
 
 Questions:
 

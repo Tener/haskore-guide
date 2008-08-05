@@ -1,7 +1,7 @@
 Goal
 =====
 
-From now on, I'll be building music pieces used for some music-potential test targeted at small children. Each piece consists of 3 parts, and only one part is different from the rest.
+From now on, I'll be building music pieces used for some music-potential test. Each piece consists of 3 parts, and only one part is different from the rest.
 
 As usual, we build a helper that makes two different parts into a single test case
 
@@ -18,10 +18,10 @@ As usual, we build a helper that makes two different parts into a single test ca
 
 	combine_melody         = line . L.intersperse hnr
 	make_test n m1 m2      = combine_melody $ arrange_melody n m1 m2
-	
+
 And a helper to combine pitches
 
-	pitch_line = map ( \x -> x o qn () ) where o = 1 :: Octave
+	pitch_line = line . map ( \x -> x o en () ) where o = 1 :: Octave
 	
 Let's play with it
 
@@ -70,7 +70,7 @@ The meaning is clear, a note can be silenced and it becomes a rest note.
 
 	rest d' = prim (Atom d' Nothing)
 
-This tells us that a rest note is applying `prim` on the result of an `Atom` constructor.
+This tells us that a rest note is applying `prim` on a result of the `Atom` constructor.
 
 	data Primitive note =
           	Atom Dur (Atom note) -- a note or a rest
