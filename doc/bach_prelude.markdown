@@ -14,7 +14,7 @@ We first create a helper to generate midi file accessible from the web.
 Prelude Helper
 ---------------
 
-Prelude has periodic repetition, we want to take advantage of this pattern
+Prelude has periodic repetitions, we want to take advantage of this pattern
 
 in Music
 
@@ -41,7 +41,7 @@ First try
 
 	prelude_start = line . map (M.replicate 2)
 
-	prelude_1 = export_to "prelude" "prelude_1" $ prelude_start [first_period]
+	prelude_1 = export_to "prelude" 1 $ prelude_start [first_period]
 
 
 [prelude_1](../midi/prelude/prelude_1.midi?raw=true) seems to be too slow.
