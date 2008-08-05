@@ -32,10 +32,10 @@ Let's play with it
 Now we have a one liner to generate simple music test :)
 
 
-Rests
-------
+Rest
+-----
 
-You may have spotted the usage of `hnr`.
+You may have noticed the usage of `hnr`.
 
 from Music
 
@@ -70,13 +70,13 @@ The meaning is clear, a note can be silenced and it becomes a rest note.
 
 	rest d' = prim (Atom d' Nothing)
 
-This tells us that a rest note is what we get from the data type constructed by applying the Atom constructor to a duration and Nothing.
+This tells us that a rest note is applying `prim` on the result of an `Atom` constructor.
 
 	data Primitive note =
           	Atom Dur (Atom note) -- a note or a rest
      	deriving (Show, Eq, Ord)
 
-So the Atom constructor creates a Primitive note. However, this constructor is extremely confusing, since `Atom` is not only used as a data type constructor ( in former ), but also a type alias ( in latter ).
+So the Atom constructor creates a Primitive note. However, this constructor is extremely confusing, since `Atom` is not only used as a data type constructor ( as in former ), but also a type alias ( as in latter ).
 
 	type Atom note = Maybe note
 	
