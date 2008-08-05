@@ -8,7 +8,7 @@ Output to Web
 
 We first create a helper to generate midi file accessible from the web.
 
-	export_to f v = render_to ("midi/" ++ f ++ "/" ++ f ++ "_" ++ show v ++ ".midi")
+	export_to f v = render_to $ concat ["midi/", f, "/", f, "_", show v, ".midi"]
 
 
 Prelude Helper

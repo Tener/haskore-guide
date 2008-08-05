@@ -26,4 +26,4 @@ pitch_line = line . map ( \x -> x o en () ) where o = 1 :: Octave
 
 
 -- bach's prelude
-export_to f v = render_to ("midi/" ++ f ++ "/" ++ f ++ "_" ++ show v ++ ".midi")
+export_to f v = render_to $ concat ["midi/", f, "/", f, "_", show v, ".midi"]

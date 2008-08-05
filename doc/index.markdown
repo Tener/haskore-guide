@@ -11,3 +11,5 @@ Index
 ## [C Major](c_major.markdown)
 
 ## [Goal](goal.markdown)
+
+## [Bach's Prelude 1 in C Major](bach_prelude.markdown)
