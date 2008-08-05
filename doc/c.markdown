@@ -56,7 +56,7 @@ generate c.midi
 	render_to "c.midi" $ c 1 1 ()
 
 
-Try playback `c.midi`, awesome.
+Try playback [c.midi](../midi/c/c.midi?raw=true), awesome.
 
 using c.hs
 -----------

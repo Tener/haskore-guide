@@ -9,7 +9,7 @@ The first thing is to output something, anything. So here is the demo file from 
 	import Haskore.Melody.Standard
 	import Haskore.Music.GeneralMIDI as MidiMusic
 	import Haskore.Interface.MIDI.Render as Render
-	main = Render.fileFromGeneralMIDIMusic "test.mid" song
+	main = Render.fileFromGeneralMIDIMusic "hello.midi" song
 	song = MidiMusic.fromStdMelody MidiMusic.AcousticGrandPiano $ chord
 	  [changeTempo (2 %+ 3) (line [c 1 (1 %+ 23) na, rest (1 %+ 23)]),
 	   transpose 3 (line [c 1 qn na, qnr]),
@@ -31,6 +31,8 @@ and run it.
 	cd haskore-guide
 	runghc src/hello.hs
 
-This will output `test.mid` inside current path.
+This will output `hello.mid` inside current path.
+
+Listen [online](../midi/hello/hello.midi?raw=true)
 
 ## [Note C](c.markdown)

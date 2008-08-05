@@ -5,17 +5,21 @@ Suppose we want to build music pieces for some music-potential test. Each piece 
 
 As usual, we build a helper that makes two different parts into a single test case
 
-	module Snippet where
+	module Goal where
 
 	import Haskore.Music
 	import Haskore.Melody
 	import Haskore.Basic.Pitch
+	import Haskore.Basic.Duration
 	import Data.List as L
 
+	import Snippet
+
+	-- goal
 	arrange_melody 1 m1 m2 = [m1, m2, m2]
 	arrange_melody 2 m1 m2 = [m2, m1, m2]
 	arrange_melody 3 m1 m2 = [m2, m2, m1]
-
+  
 	combine_melody         = line . L.intersperse hnr
 	make_test n m1 m2      = combine_melody $ arrange_melody n m1 m2
 
@@ -25,11 +29,11 @@ And a helper to combine pitches
 	
 Let's play with it
 
-	ghci src/Snippet.hs
+	ghci -isrc src/goal.hs
 	
 	render_to "test.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
 
-Now we have a one liner to generate simple music test :)
+Now we have a one liner to generate [simple music test](../midi/goal/goal.midi?raw=true) :)
 
 
 Rest

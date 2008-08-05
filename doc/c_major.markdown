@@ -34,7 +34,7 @@ This vaguely seems to be what we are looking for.
 	render_to "c_major_serial.midi" c_serial
 	render_to "c_major_parallel.midi" c_parallel
 	
-You can verify that this works as expected.
+You can verify ([serial](../midi/c_major/c_major_serial.midi?raw=true), [parallel](../midi/c_major/c_major_parallel.midi?raw=true)) that this works as expected.
 
 Higher level helpers
 ----------------------
