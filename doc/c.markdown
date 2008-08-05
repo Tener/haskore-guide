@@ -35,7 +35,7 @@ The Melody Module
 	:t c
 	-- c :: Haskore.Basic.Pitch.Octave -> Haskore.Basic.Duration.T -> attr -> T attr
 	
-Trying to guess what it does, it takes an Octave, a duration and some attributes and then produce the Melody.T type.
+Trying to guess what it does, it takes an octave, a duration and some attributes and then produce the Melody.T type.
 
 We want the melody type, so we tried
 
@@ -93,19 +93,19 @@ If we look into Duration, there are in fact some neat value-functions available 
 	tn   = 1%+32    -- thirty-second note
 	sfn  = 1%+64    -- sixty-fourth note
 	
+and some neat transformers and applications
+
+	dotted, doubleDotted :: T -> T
+	dotted       = ((3%+2) *)
+	doubleDotted = ((7%+4) *)
+
 	dwn  = dotted wn    -- dotted whole note
 	dhn  = dotted hn    -- dotted half note
 	dqn  = dotted qn    -- dotted quarter note
 	den  = dotted en    -- dotted eighth note
 	dsn  = dotted sn    -- dotted sixteenth note
 	dtn  = dotted tn    -- dotted thirty-second note
-	
-and some neat transformers and applications
-
-	dotted, doubleDotted :: T -> T
-	dotted       = ((3%+2) *)
-	doubleDotted = ((7%+4) *)
-	
+		
 	ddhn = doubleDotted hn  -- double-dotted half note
 	ddqn = doubleDotted qn  -- double-dotted quarter note
 	dden = doubleDotted en  -- double-dotted eighth note

@@ -27,9 +27,9 @@ This vaguely seems to be what we are looking for.
 	
 	:m + Haskore.Music Haskore.Melody
 	
-	c_major = map (\x - > x 1 qn () ) [c, e, g]
-	c_serial = foldl1 (+:+) c_major
-	c_parallel = foldl1 (=:=) c_major
+	let c_major = map (\x - > x 1 qn () ) [c, e, g]
+	let c_serial = foldl1 (+:+) c_major
+	let c_parallel = foldl1 (=:=) c_major
 	
 	render_to "c_major_serial.midi" c_serial
 	render_to "c_major_parallel.midi" c_parallel
