@@ -6,7 +6,7 @@ Believe it or not, we have everything we need to generate Bach's Prelude. The re
 Output to Web
 --------------
 
-We first create a helper to generate midi file accessible from the web.
+We first create a helper to generate midi files accessible from the web.
 
 	export_to f v = render_to $ concat ["midi/", f, "/", f, "_", show v, ".midi"]
 
@@ -63,7 +63,7 @@ Let's try it out
 
 	prelude_2 = export_to "prelude" 2 $ changeTempo 2 $ prelude_start [first_period]
 
-[prelude_2](../midi/prelude/prelude_2.midi?raw=true) now has a faster tempo, which tells us that tempo ratio and tempo rate are proportional.
+[prelude_2](../midi/prelude/prelude_2.midi?raw=true) now has a faster tempo, which tells us that the DurRatio parameter increases the tempo.
 
 
 
