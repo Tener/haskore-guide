@@ -1,7 +1,7 @@
 Goal
 =====
 
-From now on, I'll be building music pieces used for some music-potential test. Each piece consists of 3 parts, and only one part is different from the rest.
+Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and only one part is different from the rest.
 
 As usual, we build a helper that makes two different parts into a single test case
 
@@ -87,3 +87,5 @@ Finally `prim` is defined in
 
 
 FIXME: How `prim` converts a Primitive note into a Music.T note ?
+
+[Bach's Prelude](bach_prelude.markdown)
