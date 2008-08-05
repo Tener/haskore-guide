@@ -44,7 +44,7 @@ First try
 	prelude_1 = export_to "prelude" "prelude_1" $ prelude_start [first_period]
 
 
-[prelude_1](../midi/prelude/prelude_1.midi) seems to be too slow.
+[prelude_1](../midi/prelude/prelude_1.midi?raw=true) seems to be too slow.
 
 
 Fix tempo
@@ -63,7 +63,7 @@ Let's try it out
 
 	prelude_2 = export_to "prelude" 2 $ changeTempo 2 $ prelude_start [first_period]
 
-[prelude_2](../midi/prelude/prelude_2.midi) now has a faster tempo, which tells us that tempo ratio and tempo rate are proportional.
+[prelude_2](../midi/prelude/prelude_2.midi?raw=true) now has a faster tempo, which tells us that tempo ratio and tempo rate are proportional.
 
 
 
