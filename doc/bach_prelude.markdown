@@ -124,4 +124,4 @@ whole music
 	prelude_full     = line [ prelude_start (first_period : rest_period), prelude_end, prelude_conclude ]
 	prelude_3        = export_to "prelude" 3 $ changeTempo 2 $ prelude_full
 
-Please relax and [enjoy](../midi/prelude/prelude_3.midi?raw=true). More beers please!
+Please relax and [enjoy](../midi/prelude/prelude_3.midi?raw=true). More beer please!
