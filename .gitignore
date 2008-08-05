@@ -1,1 +1,4 @@
 *.mid
+
+export/*
+test_data/*

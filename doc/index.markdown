@@ -9,3 +9,5 @@ Index
 ## [Note C](c.markdown)
 
 ## [C Major](c_major.markdown)
+
+## [Goal](goal.markdown)

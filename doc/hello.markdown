@@ -33,4 +33,4 @@ and run it.
 
 This will output `test.mid` inside current path.
 
-## [Next](c.markdown)
+## [Note C](c.markdown)

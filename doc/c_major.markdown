@@ -16,9 +16,9 @@ Questions:
 from Music
 
 >	(+:+), (=:=) :: T note -> T note -> T note
->
+
 >	infixr 7 +:+  {- like multiplication -}
->
+
 >	infixr 6 =:=  {- like addition -}
 
 This vaguely seems to be what we are looking for.
@@ -42,9 +42,9 @@ Higher level helpers
 from Music
 
 >	line, chord :: [T note] -> T note
->
+
 >	line  = serial
->
+
 >	chord = parallel
 
 Can these be the helpers that do what we just did? The answer is yes. In c_major.hs we have 
@@ -55,3 +55,5 @@ Can these be the helpers that do what we just did? The answer is yes. In c_major
 It works exactly the same as folding on `(=:=)`.
 
 _Sweet_ :)
+
+## [Goal](goal.markdown)

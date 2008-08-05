@@ -111,4 +111,4 @@ and some neat transformers and applications
 	dden = doubleDotted en  -- double-dotted eighth note
 	
 	
-## [Next](c_major.markdown)
+## [C Major](c_major.markdown)
