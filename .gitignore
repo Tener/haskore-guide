@@ -1,4 +1,2 @@
-*.midi
-
 export/*
 test_data/*

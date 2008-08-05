@@ -23,3 +23,7 @@ combine_melody         = line . L.intersperse hnr
 make_test n m1 m2      = combine_melody $ arrange_melody n m1 m2
 
 pitch_line = line . map ( \x -> x o en () ) where o = 1 :: Octave
+
+
+-- bach's prelude
+export_to f v = render_to ("midi/" ++ f ++ "/" ++ f ++ "_" ++ show v ++ ".midi")

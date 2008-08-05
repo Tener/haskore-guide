@@ -88,4 +88,4 @@ Finally `prim` is defined in
 
 FIXME: How `prim` converts a Primitive note into a Music.T note ?
 
-[Bach's Prelude](bach_prelude.markdown)
+[Bach's Prelude 1 in C Major](bach_prelude.markdown)
