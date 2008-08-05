@@ -6,11 +6,9 @@ Installation
 
 ### get cabal-install
 
-I recommend installing cabal-install in user space, so all your cabal packages don't require admin privilege.
+I recommend installing [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) in user space, so all your cabal packages don't require admin privilege.
 
-[cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall)
-
-Note: you might need to manually get other packages as well, e.g. HTTP, zlib, etc. 
+Note: you might need to manually get other packages that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get.
 
 ### install stock-cabal packages
 
