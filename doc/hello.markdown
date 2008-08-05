@@ -19,7 +19,7 @@ The first thing is to output something, anything. So here is the demo file from 
 
 If we ignore all the imports, the meaning is pretty clear. 
 
-* main: It output a `test.mid` file from a song. 
+* main: It output a `hello.mid` file from a song. 
 * song: The song is ( reading from right to left ) a chord, played by a piano, and exported in midi format.
 
 All the source code in each tutorial is inside the src folder, so get this git repo
@@ -33,6 +33,6 @@ and run it.
 
 This will output `hello.mid` inside current path.
 
-Listen [online](../midi/hello/hello.midi?raw=true)
+Play [hello](../midi/hello/hello.midi?raw=true)
 
 ## [Note C](c.markdown)

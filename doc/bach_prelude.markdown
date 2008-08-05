@@ -14,7 +14,7 @@ We first create a helper to generate midi file accessible from the web.
 Prelude Helper
 ---------------
 
-Prelude has periodic repetitions, we want to take advantage of this pattern
+Prelude has repetitions and we want to take advantage of this pattern.
 
 in Music
 
