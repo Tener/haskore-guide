@@ -8,6 +8,10 @@ Installation
 
 I recommend installing cabal-install in user space, so all your cabal packages don't require admin privilege.
 
+[cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall)
+
+Note: you might need to manually get other packages as well, e.g. HTTP, zlib, etc. 
+
 ### install stock-cabal packages
 
 	-- system commands
