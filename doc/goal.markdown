@@ -1,7 +1,7 @@
 Goal
 =====
 
-From now on, I'll be building music pieces used for some musical potential test targeted at children from age 4 to 10. Each piece consists of 3 parts, and only one part is different the rest.
+From now on, I'll be building music pieces used for some music-potential test targeted at small children. Each piece consists of 3 parts, and only one part is different from the rest.
 
 As usual, we build a helper that makes two different parts into a single test case
 

@@ -8,11 +8,13 @@ import Haskore.Melody
 import Haskore.Basic.Pitch
 import Data.List as L
 
+
+-- c_major
 render_to f m = Render.fileFromGeneralMIDIMusic f song where
   song = MidiMusic.fromMelodyNullAttr MidiMusic.AcousticGrandPiano m
 
 
-
+-- goal
 arrange_melody 1 m1 m2 = [m1, m2, m2]
 arrange_melody 2 m1 m2 = [m2, m1, m2]
 arrange_melody 3 m1 m2 = [m2, m2, m1]
