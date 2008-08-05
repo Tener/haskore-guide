@@ -110,5 +110,29 @@ and some neat transformers and applications
 	ddqn = doubleDotted qn  -- double-dotted quarter note
 	dden = doubleDotted en  -- double-dotted eighth note
 	
+Notes other then C
+-------------------
+
+from Melody
+
+	note :: Pitch.T -> Duration.T -> attr -> T attr
+	note p d' nas = Medium.prim (Music.Atom d' (Just (Note nas p)))
+	
+	note' :: Pitch.Class -> Pitch.Octave ->
+	           Duration.T -> attr -> T attr
+	note' = flip (curry note)
+	
+	cf,c,cs,df,d,ds,ef,e,es,ff,f,fs,gf,g,gs,af,a,as,bf,b,bs ::
+	   Pitch.Octave -> Duration.T -> attr -> T attr
+	
+	cf = note' Cf;  c = note' C;  cs = note' Cs
+	df = note' Df;  d = note' D;  ds = note' Ds
+	ef = note' Ef;  e = note' E;  es = note' Es
+	ff = note' Ff;  f = note' F;  fs = note' Fs
+	gf = note' Gf;  g = note' G;  gs = note' Gs
+	af = note' Af;  a = note' A;  as = note' As
+	bf = note' Bf;  b = note' B;  bs = note' Bs
+
+It's clear we can create any note using these generators. Interestingly, `cs == df` in terms of pitch on the same octave.
 	
 ## [C Major](c_major.markdown)
