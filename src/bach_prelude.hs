@@ -48,7 +48,7 @@ rest_period = map eight_bars $ map repeat_last_3 $ in_group_of 5 [
   g (-1), e 0,    g 0,    c 1,    e 1,
   g (-1), d 0,    g 0,    c 1,    f 1,
   g (-1), d 0,    g 0,    b 0,    f 1,
-  g (-1), ef 0,   a 0,    c 1,    f 1,
+  g (-1), ef 0,   a 0,    c 1,    fs 1,
   g (-1), e 0,    g 0,    c 1,    g 1,
   g (-1), d 0,    g 0,    c 1,    f 1,
   g (-1), d 0,    g 0,    b 0,    f 1,

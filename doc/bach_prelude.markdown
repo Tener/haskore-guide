@@ -99,7 +99,7 @@ whole music
 	  g (-1), d 0,    g 0,    b 0,    f 1,
 	  c 0,    e 0,    g 0,    c 1,    e 1,
 	  c 0,    g 0,    bf 0,   c 1,    e 1,  
-
+  
 	  f (-1), f 0,    a 0,    c 1,    e 1,
 	  f (-1), c 0,    a 0,    c 1,    ef 1,
 	  af (-1),f 0,    b 0,    c 1,    d 1,
@@ -107,7 +107,7 @@ whole music
 	  g (-1), e 0,    g 0,    c 1,    e 1,
 	  g (-1), d 0,    g 0,    c 1,    f 1,
 	  g (-1), d 0,    g 0,    b 0,    f 1,
-	  g (-1), ef 0,   a 0,    c 1,    f 1,
+	  g (-1), ef 0,   a 0,    c 1,    fs 1,
 	  g (-1), e 0,    g 0,    c 1,    g 1,
 	  g (-1), d 0,    g 0,    c 1,    f 1,
 	  g (-1), d 0,    g 0,    b 0,    f 1,
