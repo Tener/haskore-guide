@@ -12,7 +12,7 @@ If you're not familiar with cabal, here's a [quick start](http://www.haskell.org
 
 I recommend installing [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) in user space, so all your cabal packages don't require admin privilege.
 
-Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get. You can find them in [Hackage](http://hackage.haskell.org/).
+Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get. You can find them in [Hackage](http://hackage.haskell.org/packages/archive/pkg-list.html).
 
 Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
 
