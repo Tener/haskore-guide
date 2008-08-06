@@ -8,7 +8,10 @@ Installation
 
 I recommend installing [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) in user space, so all your cabal packages don't require admin privilege.
 
-Note: you might need to manually get other packages that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get.
+Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get.
+
+Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
+
 
 ### install stock-cabal packages
 
@@ -21,7 +24,7 @@ Note: you might need to manually get other packages that cabal-install depends o
 
 ### install custom-cabal packages
 
-you need the following packages of exact versions
+you need the following packages exactly. ( Haskore needs these older versions to compile )
 
 	-- fetch urls
 	
