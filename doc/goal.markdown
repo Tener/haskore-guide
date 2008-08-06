@@ -1,7 +1,7 @@
 Goal
 =====
 
-Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and only one part is different from the rest.
+Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and  one part is different then the rest.
 
 As usual, we build a helper that makes two different parts into a single test case
 
