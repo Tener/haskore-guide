@@ -20,3 +20,5 @@ Links
 
 * [Haskore](http://www.haskell.org/haskore/)
 * [http://www.haskell.org/tmrwiki/Haskore](http://www.haskell.org/tmrwiki/Haskore)
+* [Haskore Wiki on Haskell](http://hackage.haskell.org/packages/archive/pkg-list.html)
+* [Haskore on Wikipedia](http://en.wikipedia.org/wiki/Haskore)
