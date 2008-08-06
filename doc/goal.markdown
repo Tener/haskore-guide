@@ -31,7 +31,7 @@ Let's play with it
 
 	ghci -isrc src/goal.hs
 	
-	render_to "test.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
+	render_to "goal.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
 
 Now we have a one liner to generate [simple music test](../midi/goal/goal.midi?raw=true) :)
 

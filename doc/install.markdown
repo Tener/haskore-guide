@@ -2,13 +2,17 @@ Installation
 =============
 
 
-### get GHC-6.8.3
+### install GHC-6.8.3
+
+### get to know the cabal
+
+If you're not familiar with the cabal package management system for Haskell, spent 5 minuets reading [This wiki](http://www.haskell.org/haskellwiki/Cabal/How_to_install_a_Cabal_package). It could save you some time later.
 
 ### get cabal-install
 
 I recommend installing [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) in user space, so all your cabal packages don't require admin privilege.
 
-Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get.
+Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get. You can find them in [Hackage](http://hackage.haskell.org/).
 
 Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
 
