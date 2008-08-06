@@ -6,7 +6,7 @@ Installation
 
 ### get to know cabal
 
-If you're not familiar with the cabal here's a [quick start](http://www.haskell.org/haskellwiki/Cabal/How_to_install_a_Cabal_package).
+If you're not familiar with cabal, here's a [quick start](http://www.haskell.org/haskellwiki/Cabal/How_to_install_a_Cabal_package).
 
 ### get cabal-install
 
