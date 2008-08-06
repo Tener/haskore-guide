@@ -4,7 +4,7 @@ Installation
 
 ### install GHC-6.8.3
 
-### get to know the cabal
+### get to know cabal
 
 If you're not familiar with the cabal package management system for Haskell, spent 5 minuets reading [This wiki](http://www.haskell.org/haskellwiki/Cabal/How_to_install_a_Cabal_package). It could save you some time later.
 
