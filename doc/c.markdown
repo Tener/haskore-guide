@@ -35,9 +35,9 @@ The Melody Module
 	:t c
 	-- c :: Haskore.Basic.Pitch.Octave -> Haskore.Basic.Duration.T -> attr -> T attr
 	
-Trying to guess what it does, it takes an octave, a duration and some attributes and then produce the Melody.T type.
+Trying to guess what it does, it takes an octave, a duration and some attributes and then produces the Melody.T type.
 
-We want the melody type, so we tried
+We want the melody type, so we try
 
 	:t c 1 1 ()
 	-- c 1 1 () :: T ()
@@ -56,7 +56,7 @@ generate c.midi
 	render_to "c.midi" $ c 1 1 ()
 
 
-Try playback [c.midi](../midi/c/c.midi?raw=true), awesome.
+Try to playback [c.midi](../midi/c/c.midi?raw=true), awesome.
 
 using c.hs
 -----------
