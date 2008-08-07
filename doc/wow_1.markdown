@@ -1,7 +1,7 @@
 WOW 1
 =====
 
-This will probably be a series of tutorials which leads us to _functionally_ produce various theme music from the world of warcraft.
+This will probably be a series of tutorials which lead us to _functionally_ produce various theme music from the world of warcraft.
 
 What is the Music type?
 ----------------------
@@ -102,9 +102,9 @@ in Melody
 What is Midi?
 --------------
 
-Instead of reading the specifications, Midi can be think of as World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
+Instead of reading the specifications, Midi can be think of as those World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
 
-I could be seriously wrong here, but it's a model that works for me.
+I could be seriously wrong here, but it's a model of thinking that works for me.
 
 
 Changing instruments
@@ -145,7 +145,7 @@ It now seems to be too easy to set up an instrument, isn't it.
 Tavern Melody
 --------------
 
-Let's conclude this tutorial with this little teaser
+Let's conclude this tutorial with this little teaser.
 
 some helpers
 
