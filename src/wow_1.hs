@@ -10,7 +10,7 @@ import Haskore.Music.GeneralMIDI
 import Haskore.Basic.Interval
 
 flute_base = [
-  cs 1 qn, fs 1 qn, fs 1 en, e 1 en, fs 1 hn, gs 1 qn
+  cs 1 qn, fs 1 qn, fs 1 en, e 1 en, fs 1 hn, fs 1 en, gs 1 en
   ]
 
 flute_var_1 = [
