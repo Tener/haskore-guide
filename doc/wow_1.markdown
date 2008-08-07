@@ -96,7 +96,7 @@ in Melody
 	note :: Pitch.T -> Duration.T -> attr -> T attr
 	note p d' nas = Medium.prim (Music.Atom d' (Just (Note nas p)))
 
-`note` raise the Music.Primitive type constructed from `Music.Atom to the Music.T` type, since `Music.T` _transforms to_ (need a better word) `CtrlMediumList.T` which is an instance of Medium. `prim` instantiated in `Medium.Controllel.List` simply put the `Medium.Controllel.List.Primitive` constructor to it's parameter, and the circle of type transformation is complete.
+`note` raise the `Music.Primitive` type constructed from `Music.Atom` to `the Music.T` type, since `Music.T` _transforms to_ (need a better word) `CtrlMediumList.T` which is an instance of Medium. `prim` instantiated in `Medium.Controllel.List` simply put the `Medium.Controllel.List.Primitive` constructor to it's parameter, and the circle of type transformation is complete.
 
 
 What is Midi?
