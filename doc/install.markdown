@@ -4,7 +4,7 @@ Installation
 ### requirements
 
 * Haskore won't build on Windows, yet.
-* This process has been reported to be succesful under Ubuntu Linux and MacOSX Leopard. 
+* This process has been reported to be successful under Ubuntu Linux and MacOSX Leopard. 
 
 ### install GHC-6.8.3
 
