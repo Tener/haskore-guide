@@ -1,7 +1,7 @@
 WOW 1
 =====
 
-This will probably be a series of tutorials which leads us to _functional_ produce some theme music from the world of warcraft.
+This will probably be a series of tutorials which leads us to _functionally_ produce various theme music from the world of warcraft.
 
 What is the Music type?
 ----------------------
@@ -19,9 +19,9 @@ Now everything is about the Music type, what is it then? Suppose we are the desi
 
 It should:
 
-	* capture the pitch value, duration, and some note specific attributes ( not used yet )
-	* be composable both as in line and as in chord, the result is preferably of the same type
-	* can be apply to effects ( controls ), result of which is preferably of the same type
+* capture the pitch value, duration, and some note specific attributes ( not used yet )
+* be composable both as in line and as in chord, the result is preferably of the same type
+* can be apply to effects ( controls ), result of which is preferably of the same type
 
 I'm sure you already have a feeling of what this data type would look like, the definition is actually well hidden
 
@@ -98,15 +98,15 @@ in Medium
 What is Midi?
 --------------
 
-Instead of reading the specifications, Midi can be think of World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different action buttons can be placed arbitrarily in each action bar ( defining instruments inside a channel ). You then invoke your action bar by pressing it ( midi events are send to channels then mapped to instruments and played ).
+Instead of reading the specifications, Midi can be think of World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
 
-I could be seriously wrong here, but it's a model to think that works for me.
+I could be seriously wrong here, but it's a model that works for me.
 
 
 Changing instruments
 ---------------------
 
-Recalling that in `render_to` helper, we used `fromMelodyNullAttr` to render melody in an instrument
+Recalling that in `render_to` helper, we used `fromMelodyNullAttr` to render melody in piano.
 
 from Snippet
 	
@@ -136,7 +136,7 @@ from Sound.MIDI.General ( this is a cabal package, outside of Haskore )
 		...
 	     deriving (Show, Eq, Ord, Ix, Enum, Bounded)
 
-It seems to be too easy now to change an instrument, isn't it.
+It seems to be too easy now to set up an instrument, isn't it.
 
 Tavern Melody
 --------------
@@ -206,4 +206,4 @@ Now we have everything we need, let's see the code
 
 	wow_1 = export_to' "wow_1" 1 $ changeTempo 3 $ transpose octave $ t1
 
-Please relax and enjoy this wonderful [melody](../midi/wow_1/wow_1_1.midi) :)
+Please relax and enjoy this wonderful [melody](../midi/wow_1/wow_1_1.midi?raw=true) :)
