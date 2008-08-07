@@ -28,3 +28,10 @@ Links
 * [Haskore Wiki on Haskell](http://www.haskell.org/haskellwiki/Haskore)
 * [Haskore on Wikipedia](http://en.wikipedia.org/wiki/Haskore)
 * [Haskore Live (Video Demo)](http://video.google.com/videoplay?docid=5849699036632847795)
+
+Patchs
+=======
+
+* this is a git repo after all, patches welcome
+* otherwise, reach me at [nfjinjing@gmail.com](mailto:nfjinjing@gmail.com)
+* It will be mirrored to wiki.haskell.org, when I got more time. I'm currently enjoying the fast (create / modify -> publishing) cycle).
