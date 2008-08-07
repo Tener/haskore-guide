@@ -125,3 +125,5 @@ whole music
 	prelude_3        = export_to "prelude" 3 $ changeTempo 2 $ prelude_full
 
 Please relax and [enjoy](../midi/prelude/prelude_3.midi?raw=true). More beer please!
+
+## [Main theme of the World of Warcraft 1](wow_1.markdown)
