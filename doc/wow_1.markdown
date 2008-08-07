@@ -1,7 +1,7 @@
 WOW 1
 =====
 
-This will probably be a series of tutorials which lead us to _functionally_ produce various theme music from the world of warcraft.
+There will probably be a series of tutorials which lead us to _functionally_ produce various theme music from the world of warcraft.
 
 What is the Music type?
 ----------------------
@@ -104,7 +104,7 @@ What is Midi?
 
 Instead of reading the specifications, Midi can be think of as those World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
 
-I could be seriously wrong here, but it's a model of thinking that works for me.
+I could be seriously wrong here, it is just a model of thinking.
 
 
 Changing instruments
@@ -153,7 +153,7 @@ some helpers
 	render_to' f = Render.fileFromGeneralMIDIMusic f
 	export_to' f v = render_to' $ concat ["midi/", f, "/", f, "_", show v, ".midi"]
 
-We want to be able to playback in a higher octave, so
+We want to be able to playback in a higher octave.
 
 in Music
 
@@ -179,7 +179,7 @@ in Interval
 	majorSeventh = 11
 	octave       = 12 
 
-Now we have everything we need, let's see the code
+Now we have everything we need, let's see the code:
 
 	flute_base = [
 	  cs 1 qn, fs 1 qn, fs 1 en, e 1 en, fs 1 hn, gs 1 qn
