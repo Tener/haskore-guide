@@ -23,7 +23,7 @@ It should:
 * be composable both as in line and as in chord, the result is preferably of the same type
 * can be apply to effects ( controls ), result of which is preferably of the same type
 
-I'm sure you already have a feeling of what this data type would look like, the definition is actually well hidden
+I'm sure you already have a feeling of what this data type would look like, the definition is well hidden
 
 in Medium.Controlled.List
 
@@ -46,10 +46,7 @@ in Music
 	       | Player     PlayerName      -- player label
 	       | Phrase     PhraseAttribute -- phrase attribute
 	    deriving (Show, Eq, Ord)
-	
-	control :: Control -> T note -> T note
-	control ctrl = CtrlMedium.control ctrl
-	
+
 back to Medium.Controlled.List
 
 	instance Medium.Construct (T control) where
@@ -79,8 +76,6 @@ back to Medium.Controlled.List
 	serial, parallel :: [T control a] -> T control a
 	serial   = Serial
 	parallel = Parallel
-	
-and the Construct class
 
 in Medium
 
@@ -94,11 +89,20 @@ in Medium
 	   serial, parallel :: Temporal.C a => [medium a] -> medium a
 	   serial1, parallel1 :: [medium a] -> medium a
 
+Remember in Melody, there's a `prim` function that construct Music.T note ?
+
+in Melody
+
+	note :: Pitch.T -> Duration.T -> attr -> T attr
+	note p d' nas = Medium.prim (Music.Atom d' (Just (Note nas p)))
+
+`note` raise the Music.Primitive type constructed from `Music.Atom to the Music.T` type, since `Music.T` _transforms to_ (need a better word) `CtrlMediumList.T` which is an instance of Medium. `prim` instantiated in `Medium.Controllel.List` simply put the `Medium.Controllel.List.Primitive` constructor to it's parameter, and the circle of type transformation is complete.
+
 
 What is Midi?
 --------------
 
-Instead of reading the specifications, Midi can be think of World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
+Instead of reading the specifications, Midi can be think of as World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
 
 I could be seriously wrong here, but it's a model that works for me.
 
@@ -136,7 +140,7 @@ from Sound.MIDI.General ( this is a cabal package, outside of Haskore )
 		...
 	     deriving (Show, Eq, Ord, Ix, Enum, Bounded)
 
-It seems to be too easy now to set up an instrument, isn't it.
+It now seems to be too easy to set up an instrument, isn't it.
 
 Tavern Melody
 --------------
