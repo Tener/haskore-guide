@@ -77,3 +77,5 @@ Second step:
 	  ]
 
 It might be hard to [spot](../midi/wow_2/wow_2_2.midi?raw=true), but we did change some dynamics in the melody.
+
+## [Theme music from the World of Warcraft 3 ( multitrack )](wow_3.markdown)
