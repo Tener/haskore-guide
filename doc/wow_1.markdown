@@ -1,9 +1,9 @@
 WOW 1
 =====
 
-This will probably be a series of tutorials which leads us to _functional_ produce the some theme music from the world of warcraft.
+This will probably be a series of tutorials which leads us to _functional_ produce some theme music from the world of warcraft.
 
-What is Music.T type?
+What is the Music type?
 ----------------------
 
 We haven't made clear distinctions between the Melody type and Music type:
@@ -93,7 +93,7 @@ in Medium
 
 	   serial, parallel :: Temporal.C a => [medium a] -> medium a
 	   serial1, parallel1 :: [medium a] -> medium a
-	
+
 
 What is Midi?
 --------------
@@ -138,4 +138,72 @@ from Sound.MIDI.General ( this is a cabal package, outside of Haskore )
 
 It seems to be too easy now to change an instrument, isn't it.
 
-Let's conclude this tutorial with this little teaser.
+Tavern Melody
+--------------
+
+Let's conclude this tutorial with this little teaser
+
+some helpers
+
+	play_with = MidiMusic.fromMelodyNullAttr
+	render_to' f = Render.fileFromGeneralMIDIMusic f
+	export_to' f v = render_to' $ concat ["midi/", f, "/", f, "_", show v, ".midi"]
+
+We want to be able to playback in a higher octave, so
+
+in Music
+
+	transpose :: Pitch.Relative -> T note -> T note
+	transpose = mkControl Transpose
+
+in Pitch
+	
+	type Relative = Int
+	
+in Interval
+
+	unison       =  0
+	minorSecond  =  1
+	majorSecond  =  2
+	minorThird   =  3
+	majorThird   =  4
+	fourth       =  5
+	fifth        =  7
+	minorSixth   =  8
+	majorSixth   =  9
+	minorSeventh = 10
+	majorSeventh = 11
+	octave       = 12 
+
+Now we have everything we need, let's see the code
+
+	flute_base = [
+	  cs 1 qn, fs 1 qn, fs 1 en, e 1 en, fs 1 hn, gs 1 qn
+	  ]
+
+	flute_var_1 = [
+	  a 1 qn, b 1 qn, a 1 qn, gs 1 en, fs 1 en, e 1 hn
+	  ]
+
+	flute_var_2 = [
+	  a 1 qn, e 1 en, cs 1 en, a 1 qn, gs 1 dhn
+	  ]
+
+	flute_var_3 = [
+	  a 1 qn, fs 1 qn, a 1 qn, b 1 dqn, a 1 en, gs 1 qn, fs 1 dwn
+	  ]
+
+	t1 = play_with PanFlute . line $ map (\x -> x ()) $ 
+	  concat [
+	    flute_base,
+	    flute_var_1,
+	    flute_base,
+	    flute_var_2,
+	    flute_base,
+	    flute_var_1,
+	    flute_var_3
+	    ]
+
+	wow_1 = export_to' "wow_1" 1 $ changeTempo 3 $ transpose octave $ t1
+
+Please relax and enjoy this wonderful [melody](../midi/wow_1/wow_1_1.midi) :)
