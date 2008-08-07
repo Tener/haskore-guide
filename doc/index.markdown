@@ -14,7 +14,7 @@ Index
 
 ## [Bach's Prelude 1 in C Major](bach_prelude.markdown)
 
-## [Main theme of the World of Warcraft 1](wow_1.markdown)
+## [Theme music from the World of Warcraft 1](wow_1.markdown)
 
 Links
 ======

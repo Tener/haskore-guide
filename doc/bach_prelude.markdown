@@ -126,4 +126,4 @@ whole music
 
 Please relax and [enjoy](../midi/prelude/prelude_3.midi?raw=true). More beer please!
 
-## [Main theme of the World of Warcraft 1](wow_1.markdown)
+## [Theme music from the World of Warcraft 1](wow_1.markdown)
