@@ -15,7 +15,7 @@ from Music
 	staccato = articulation . Staccato
 	legato   = articulation . Legato
 	
-These functions decorate note duration. In particular, staccato makes a note shorter, but insert a rest to fill in the gap to make total duration as the same as before. If you have the original WOW sound track, you can discover that notes of the melody played by the flute are not always in full length.
+These functions decorate note duration. In particular, staccato makes a note shorter, but insert a rest to fill in the gap to make total duration as the same as before. If you have the original WOW sound track, you can discover that notes of the melody played by the flute are not always in full value.
 
 First step towards a more natural sound:
 
