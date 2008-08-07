@@ -1,6 +1,11 @@
 Installation
 =============
 
+### requirements
+
+	Haskore won't build on Windows.
+	
+	This process has been reported to be succesful under Ubuntu Linux and MacOSX Leopard. 
 
 ### install GHC-6.8.3
 
@@ -16,6 +21,21 @@ Note 1: you might need to manually get other _cabal packages_ that cabal-install
 
 Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
 
+Note 3: Super quick start on installing cabal packages
+
+	-- system commands
+	
+	cd $package_dir
+	
+	runghc Setup.hs configure
+	runghc Setup.hs build
+	runghc Setup.hs install
+	
+	-- If you prefer install them in user-space, use
+
+	runghc Setup.hs configure --user --prefix=$HOME
+	runghc Setup.hs build
+	runghc Setup.hs install
 
 ### install stock-cabal packages
 
@@ -25,6 +45,10 @@ Note 2: You get `cabal` binary after installing `cabal-install`. You can view al
 	cabal install midi
 	cabal install markov-chain
 	cabal install non-negative
+	cabal install unix
+	cabal install binary
+
+Note: run `cabal help install` to get more information, e.g. `--global` to force install in root space.
 
 ### install custom-cabal packages
 
@@ -34,13 +58,13 @@ you need the following packages exactly. ( Haskore needs these older versions to
 	
 	http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
 	http://hackage.haskell.org/packages/archive/hsc3/0.1.1/hsc3-0.1.1.tar.gz
-		
+	
 ### install darcs packages
 
-	-- darcs url
+	-- system commands
 	
-	http://darcs.haskell.org/supercollider-ht/
-	http://darcs.haskell.org/record-access/
+	darcs get http://darcs.haskell.org/supercollider-ht/
+	darcs get http://darcs.haskell.org/record-access/
 
 ### install Haskore
 
@@ -50,11 +74,9 @@ The zip package on Haskore homepage won't work on ghc-6.8.3! You need the darcs 
 
 #### using darcs 1.0.9 to get the repo and install
 
-	-- darcs url
+	-- system commands
 	
-	http://darcs.haskell.org/haskore/ 
-	
-Hint: using the `partial` flag, or it takes forever.
+	darcs1 -- partial http://darcs.haskell.org/haskore/ 
 
 ### Test install
 
