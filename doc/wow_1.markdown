@@ -212,4 +212,4 @@ Now we have everything we need, let's see the code:
 
 Please relax and enjoy this wonderful [melody](../midi/wow_1/wow_1_1.midi?raw=true) :)
 
-## [Theme music from the World of Warcraft 2 ( music decorations )](wow_2.markdown)
+## [Theme music from the World of Warcraft 2 ( music decorators )](wow_2.markdown)

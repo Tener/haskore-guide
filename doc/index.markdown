@@ -16,7 +16,7 @@ Index
 
 ## [Theme music from the World of Warcraft 1 ( the music type and midi instruments )](wow_1.markdown)
 
-## [Theme music from the World of Warcraft 2 ( music decorations )](wow_2.markdown)
+## [Theme music from the World of Warcraft 2 ( music decorators )](wow_2.markdown)
 
 Links
 ======
