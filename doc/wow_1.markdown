@@ -21,7 +21,7 @@ It should:
 
 * capture the pitch value, duration, and some note specific attributes ( not used yet )
 * be composable both as in line and as in chord, the result is preferably of the same type
-* can be apply to effects ( controls ), result of which is preferably of the same type
+* can be apply with effects ( controls ), result of which is preferably of the same type
 
 I'm sure you already have a feeling of what this data type would look like, the definition is well hidden
 
@@ -140,7 +140,7 @@ from Sound.MIDI.General ( this is a cabal package, outside of Haskore )
 		...
 	     deriving (Show, Eq, Ord, Ix, Enum, Bounded)
 
-It now seems to be too easy to set up an instrument, isn't it.
+It now seems too easy to set up an instrument, isn't it.
 
 Tavern Melody
 --------------
