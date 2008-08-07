@@ -18,6 +18,8 @@ Index
 
 ## [Theme music from the World of Warcraft 2 ( music decorators )](wow_2.markdown)
 
+## [Theme music from the World of Warcraft 3 ( multitrack )](wow_3.markdown)
+
 Links
 ======
 
