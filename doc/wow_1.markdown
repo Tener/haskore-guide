@@ -89,7 +89,7 @@ in Medium
 	   serial, parallel :: Temporal.C a => [medium a] -> medium a
 	   serial1, parallel1 :: [medium a] -> medium a
 
-Remember in Melody, there's a `prim` function that construct Music.T note ?
+Remember in Melody, there's a usage of `prim` function that construct Music.T note ?
 
 in Melody
 
