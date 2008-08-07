@@ -56,4 +56,4 @@ It works exactly the same as folding on `(=:=)`.
 
 _Sweet_ :)
 
-## [Goal](goal.markdown)
+## [Music Test Generator](music_test.markdown)

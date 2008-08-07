@@ -10,11 +10,13 @@ Index
 
 ## [C Major](c_major.markdown)
 
-## [Goal](goal.markdown)
+## [Music Test Generator](music_test.markdown)
 
 ## [Bach's Prelude 1 in C Major](bach_prelude.markdown)
 
-## [Theme music from the World of Warcraft 1](wow_1.markdown)
+## [Theme music from the World of Warcraft 1 ( the music type and midi instruments )](wow_1.markdown)
+
+## [Theme music from the World of Warcraft 2 ( music decorations )](wow_2.markdown)
 
 Links
 ======

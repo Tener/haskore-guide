@@ -211,3 +211,5 @@ Now we have everything we need, let's see the code:
 	wow_1 = export_to' "wow_1" 1 $ changeTempo 3 $ transpose octave $ t1
 
 Please relax and enjoy this wonderful [melody](../midi/wow_1/wow_1_1.midi?raw=true) :)
+
+## [Theme music from the World of Warcraft 2 ( music decorations )](wow_2.markdown)

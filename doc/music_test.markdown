@@ -1,5 +1,5 @@
-Goal
-=====
+Music Test
+===========
 
 Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and one part is different then the rest.
 
