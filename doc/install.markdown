@@ -3,9 +3,8 @@ Installation
 
 ### requirements
 
-	Haskore won't build on Windows.
-	
-	This process has been reported to be succesful under Ubuntu Linux and MacOSX Leopard. 
+* Haskore won't build on Windows, yet.
+* This process has been reported to be succesful under Ubuntu Linux and MacOSX Leopard. 
 
 ### install GHC-6.8.3
 
@@ -21,7 +20,7 @@ Note 1: you might need to manually get other _cabal packages_ that cabal-install
 
 Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
 
-Note 3: Super quick start on installing cabal packages
+Note 3: Super quick start on installing cabal packages (without `cabal-install` installed). This is the way to install `cabal-install` itself, and other packages that can't be installed using `cabal-install`.
 
 	-- system commands
 	
