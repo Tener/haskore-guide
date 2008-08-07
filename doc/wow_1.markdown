@@ -104,7 +104,7 @@ What is Midi?
 
 Instead of reading the specifications, Midi can be think of as those World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different buttons can be placed arbitrarily in each bar ( defining instruments inside a channel ). You then invoke your actions by pressing on the icon ( midi events are send to channels then mapped to instruments and played ).
 
-I could be seriously wrong here, it is just a model of thinking.
+I could be seriously wrong here, it is a model of thinking works for me.
 
 
 Changing instruments
