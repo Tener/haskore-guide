@@ -12,7 +12,7 @@ import Haskore.Basic.Interval
 -- version 1
 
 flute_base' = [
-  cs 1 qn, staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato sn . (gs 1 en)
+  cs 1 qn, staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)
   ]
 
 flute_var_1' = [
@@ -48,7 +48,7 @@ wow_2_1 = export_to' "wow_2" 1 $ changeTempo 3 $ transpose octave $ t1'
 flute_accent = accent 0.2
 
 flute_base = [
-  accent 0.3 . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato sn . (gs 1 en)
+  accent 0.3 . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)
   ]
 
 flute_var_1 = [

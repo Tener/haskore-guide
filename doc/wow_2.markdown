@@ -20,7 +20,7 @@ These functions decorate note duration. In particular, staccato makes a note sho
 First step towards a more natural sound:
 
 	flute_base' = [
-	  cs 1 qn, staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato sn . (gs 1 en)
+	  cs 1 qn, staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)
 	  ]
 
 	flute_var_1' = [
@@ -60,7 +60,7 @@ Second step:
 	flute_accent = accent 0.2
 
 	flute_base = [
-	  accent 0.3 . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato sn . (gs 1 en)
+	  accent 0.3 . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)
 	  ]
 
 	flute_var_1 = [
