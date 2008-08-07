@@ -43,7 +43,7 @@ First try
 	prelude_1        = export_to "prelude" 1 $ prelude_start [first_period]
 
 
-[prelude_1](../midi/prelude/prelude_1.midi?raw=true) seems to be too slow.
+The tempo of [prelude_1](../midi/prelude/prelude_1.midi?raw=true) seems to be too slow.
 
 
 Fix tempo
@@ -55,13 +55,13 @@ from Music
 
 > changeTempo = mkControl Tempo
 
-It seems to do what we want, but does it increase the tempo or decrease it?
+It seems to do what we want, but does it increase or decrease tempo?
 
 Let's try it out
 
 	prelude_2        = export_to "prelude" 2 $ changeTempo 2 $ prelude_start [first_period]
 
-[prelude_2](../midi/prelude/prelude_2.midi?raw=true) now has a faster tempo, which tells us that the DurRatio parameter increases the tempo.
+[prelude_2](../midi/prelude/prelude_2.midi?raw=true) now has a faster tempo, which tells us that the DurRatio parameter increases tempo.
 
 
 The Complete Prelude

@@ -11,6 +11,7 @@ The first thing is to output something, anything. So here is the demo file from 
 	import Haskore.Interface.MIDI.Render as Render
 	
 	main = Render.fileFromGeneralMIDIMusic "hello.midi" song
+	
 	song = MidiMusic.fromStdMelody MidiMusic.AcousticGrandPiano $ chord
 	  [changeTempo (2 %+ 3) (line [c 1 (1 %+ 23) na, rest (1 %+ 23)]),
 	   transpose 3 (line [c 1 qn na, qnr]),

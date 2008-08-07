@@ -1,7 +1,7 @@
 WOW 1
 =====
 
-There will probably be a series of tutorials which lead us to _functionally_ produce various theme music from the world of warcraft.
+There will probably be a series of tutorials which lead us to _functionally_ produce some theme music from the world of warcraft.
 
 What is the Music type?
 ----------------------
@@ -19,7 +19,7 @@ Now everything is about the Music type, what is it then? Suppose we are the desi
 
 It should:
 
-* capture the pitch value, duration, and some note specific attributes ( not used yet )
+* capture the pitch value, duration and possibly other note specific attributes
 * be composable both as in line and as in chord, the result is preferably of the same type
 * can be apply with effects ( controls ), result of which is preferably of the same type
 

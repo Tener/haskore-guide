@@ -1,7 +1,7 @@
 Goal
 =====
 
-Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and  one part is different then the rest.
+Suppose we want to build music pieces for some music-potential test. Each piece will consist 3 parts, and one part is different then the rest.
 
 As usual, we build a helper that makes two different parts into a single test case
 
@@ -90,6 +90,6 @@ Finally `prim` is defined in
 	   prim :: a -> medium a
 
 
-FIXME: How `prim` converts a Primitive note into a Music.T note ?
+How `prim` converts a Primitive note into a Music.T note is explained in later tutorials, we are not quite there yet.
 
 ## [Bach's Prelude 1 in C Major](bach_prelude.markdown)

@@ -16,6 +16,6 @@ in_group_of n xs       = h : in_group_of n t where (h, t) = splitAt n xs
 
 -- wow_1
 
-play_with = MidiMusic.fromMelodyNullAttr
-render_to' f = Render.fileFromGeneralMIDIMusic f
+play_with      = MidiMusic.fromMelodyNullAttr
+render_to' f   = Render.fileFromGeneralMIDIMusic f
 export_to' f v = render_to' $ concat ["midi/", f, "/", f, "_", show v, ".midi"]

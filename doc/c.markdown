@@ -133,6 +133,6 @@ from Melody
 	af = note' Af;  a = note' A;  as = note' As
 	bf = note' Bf;  b = note' B;  bs = note' Bs
 
-It's clear we can create any note using these generators. Interestingly, `cs == df`.
+It's clear we can create any note using these generators.
 	
 ## [C Major](c_major.markdown)
