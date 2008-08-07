@@ -98,15 +98,20 @@ in Medium
 What is Midi?
 --------------
 
-Instead of reading the specifications, Midi can be think of World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different action button can be placed arbitrarily in each action bar ( defining instruments inside a channel ). You then invoke your action bar by pressing it ( midi events are send to channels then mapped to instruments and played ).
+Instead of reading the specifications, Midi can be think of World of Warcraft ( or your favorite RPG here ) 's action bars. You have several action bars ( called channels ) available to you at all time, and different action buttons can be placed arbitrarily in each action bar ( defining instruments inside a channel ). You then invoke your action bar by pressing it ( midi events are send to channels then mapped to instruments and played ).
 
-I could be seriously wrong in this, but it's a model to think that works for me.
+I could be seriously wrong here, but it's a model to think that works for me.
 
 
 Changing instruments
 ---------------------
 
-In `render_to` helper, we used `fromMelodyNullAttr` to render melody in an instrument
+Recalling that in `render_to` helper, we used `fromMelodyNullAttr` to render melody in an instrument
+
+from Snippet
+	
+	render_to f m = Render.fileFromGeneralMIDIMusic f song where
+	  song = MidiMusic.fromMelodyNullAttr MidiMusic.AcousticGrandPiano m
 
 from Music.GeneralMIDI
 
@@ -116,5 +121,21 @@ from Music.GeneralMIDI
 
 	fromMelodyNullAttr :: Instr -> Melody.T () -> T
 	fromMelodyNullAttr = RhyMusic.fromMelodyNullAttr
-	
 
+
+from Sound.MIDI.General ( this is a cabal package, outside of Haskore )
+
+	data Instrument =
+	     AcousticGrandPiano              | BrightAcousticPiano
+	   | ElectricGrandPiano              | HonkyTonk
+	   | ElectricPiano1                  | ElectricPiano2
+	   | Harpsichord                     | Clavinet
+	   | Celesta                         | Glockenspiel
+	   | MusicBox                        | Vibraphone
+	   | Marimba                         | Xylophone
+		...
+	     deriving (Show, Eq, Ord, Ix, Enum, Bounded)
+
+It seems to be too easy now to change an instrument, isn't it.
+
+Let's conclude this tutorial with this little teaser.
