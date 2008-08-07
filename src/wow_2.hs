@@ -60,7 +60,8 @@ flute_var_2 = [
   ]
   
 flute_var_3 = [
-  flute_accent . (a 1 qn), fs 1 qn, staccato en . (a 1 qn), flute_accent . (b 1 dqn), a 1 en, staccato en . (gs 1 qn), flute_accent . (fs 1 dwn)
+  flute_accent . (a 1 qn),  fs 1 qn, staccato en . (a 1 qn), 
+    flute_accent . (b 1 dqn), a 1 en, staccato en . (gs 1 qn), flute_accent . (fs 1 dwn)
   ]
 
 flute = map (\x -> x ()) $ 

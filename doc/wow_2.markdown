@@ -37,7 +37,7 @@ First step towards a more natural sound:
 
 Though still a bit machine like, this melody makes sure if ever played by a human, she could [breath](../midi/wow_2/wow_2_1.midi?raw=true).
 
-FIXME: what does legato do if note is already in full length?
+Note: `legato` simply extend the duration of a note without delaying notes after it.
 
 dynamics
 ---------
@@ -72,8 +72,8 @@ Second step:
 	  ]
 
 	flute_var_3 = [
-	  flute_accent . (a 1 qn), fs 1 qn, staccato en . (a 1 qn), 
-		flute_accent . (b 1 dqn), a 1 en, staccato en . (gs 1 qn), flute_accent . (fs 1 dwn)
+	  flute_accent . (a 1 qn),  fs 1 qn, staccato en . (a 1 qn), 
+	    flute_accent . (b 1 dqn), a 1 en, staccato en . (gs 1 qn), flute_accent . (fs 1 dwn)
 	  ]
 
 It might be hard to [spot](../midi/wow_2/wow_2_2.midi?raw=true), but we did change some dynamics in the melody.
