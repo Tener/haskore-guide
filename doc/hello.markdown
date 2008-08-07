@@ -1,7 +1,7 @@
 Hello World
 ============
 
-The first thing is to output something, anything. So here is the demo file from Haskore, we simply run it.
+The first thing is to output something, anything. So here is a demo file from Haskore, we simply run it.
 
 	module GeneratedTest where
 	import Haskore.Basic.Duration((%+))
