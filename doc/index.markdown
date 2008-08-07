@@ -34,4 +34,4 @@ Patchs
 
 * this is a git repo after all, patches welcome
 * otherwise, reach me at [nfjinjing@gmail.com](mailto:nfjinjing@gmail.com)
-* It will be mirrored to wiki.haskell.org, when I got more time. I'm currently enjoying the fast (create / modify -> publishing) cycle).
+* It will be mirrored to wiki.haskell.org, when I got more time. I'm currently enjoying the fast (create / modify -> publishing) cycle using this style of writing.
