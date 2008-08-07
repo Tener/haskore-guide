@@ -37,3 +37,5 @@ t1 = play_with PanFlute . line $ map (\x -> x ()) $
     ]
 
 wow_1 = export_to' "wow_1" 1 $ changeTempo 3 $ transpose octave $ t1
+
+main = wow_1
