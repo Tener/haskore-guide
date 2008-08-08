@@ -46,7 +46,7 @@ wow_2_1 = export_to' "wow_2" 1 $ changeTempo 3 $ transpose octave $ t1'
 -- version 2
 
 flute_accent_high = accent 0.2
-flute_accent_low = accent 0.1
+flute_accent_low  = accent 0.1
 
 flute_base = [
   flute_accent_high . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)

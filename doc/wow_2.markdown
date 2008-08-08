@@ -58,7 +58,7 @@ Artist don't play in equal dynamics, they accent whenever they feel like it.
 Second step:
 
 	flute_accent_high = accent 0.2
-	flute_accent_low = accent 0.1
+	flute_accent_low  = accent 0.1
 
 	flute_base = [
 	  flute_accent_high . (cs 1 qn), staccato en . (fs 1 qn), fs 1 en, e 1 en, fs 1 hn, fs 1 en, staccato dsn . (gs 1 en)
