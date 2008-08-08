@@ -1,4 +1,4 @@
-module Goal where
+module MusicTest where
 
 import Haskore.Music
 import Haskore.Melody
@@ -18,4 +18,4 @@ make_test n m1 m2      = combine_melody $ arrange_melody n m1 m2
 
 pitch_line = line . map ( \x -> x o en () ) where o = 1 :: Octave
 
-main = render_to "goal.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
+main = render_to "music_test.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])

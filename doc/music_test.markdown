@@ -5,7 +5,7 @@ Suppose we want to build music pieces for some music-potential test. Each piece 
 
 As usual, we build a helper that makes two different parts into a single test case
 
-	module Goal where
+	module MusicTest where
 
 	import Haskore.Music
 	import Haskore.Melody
@@ -31,9 +31,9 @@ Let's play with it
 
 	ghci -isrc src/goal.hs
 	
-	render_to "goal.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
+	render_to "music_test.midi" $ make_test 2 (pitch_line [c,d,c]) (pitch_line [c,d,e])
 
-Now we have a one liner to generate [simple music test](../midi/goal/goal.midi?raw=true) :)
+Now we have a one liner to generate [simple music test](../midi/music_test/music_test.midi?raw=true) :)
 
 
 Rest
