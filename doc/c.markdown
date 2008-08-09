@@ -56,6 +56,18 @@ generate c.midi
 	render_to "c.midi" $ c 1 1 ()
 
 
+Warning:
+
+Don't click on the midi file linked below, or any midi links in this guide if you are
+
+1. on windows
+2. using firefox
+3. installed iTunes / QuickTime
+
+Since, you'll then probably have quicktime as your default player for online midi files, and you are risking yourself being exposed of a crack sound played in highest volume. ( I have this issue on 2 machines with this kind of set up ). A work around is to right click, save as, then play back in a local media player.
+
+Mac is safe and Linux untested.
+
 Try to playback [c.midi](../midi/c/c.midi?raw=true), awesome.
 
 using c.hs
