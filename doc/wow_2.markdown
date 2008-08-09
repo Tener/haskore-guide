@@ -74,7 +74,7 @@ Second step:
 
 	flute_var_3 = [
 	  flute_accent_low . (a 1 qn),  fs 1 qn, staccato en . (a 1 qn), 
-	    flute_accent_high . (b 1 dqn), a 1 en, staccato en . (gs 1 qn), fs 1 dwn
+	    b 1 dqn, a 1 en, staccato en . (gs 1 qn), fs 1 dwn
 	  ]
 
 It might be hard to [spot](../midi/wow_2/wow_2_2.midi?raw=true), but we did change some dynamics in the melody.
