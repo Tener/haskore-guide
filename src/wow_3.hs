@@ -93,7 +93,7 @@ guitar_fill_common = M.line [
   ]
 
 guitar_fill_var_1 = gs 1 qn ()
-guitar_fill_var_2 = e 1 qn ()
+guitar_fill_var_2 = accent 0.1 $ e 1 qn ()
 
 guitar_fill = M.line $ [
   guitar_fill_common, accent 0.4 guitar_fill_var_1,

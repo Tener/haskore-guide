@@ -126,7 +126,7 @@ Now we build our naive drum track
 
 	wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
-[flute with drums](../midi/wow_3/wow_3_2.midi?raw=true)
+[with drums](../midi/wow_3/wow_3_2.midi?raw=true)
 
 Add a base track
 -----------------
