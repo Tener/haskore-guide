@@ -123,23 +123,23 @@ guitar_chord_1_var_2 = guitar_chord_1_var_template c_2
 guitar_chord_1 = M.replicate 12 guitar_chord_1_var_1 +:+ 
   M.replicate 2 guitar_chord_1_var_2 +:+ M.replicate 2 guitar_chord_1_var_1
 
-c_3 = c_template [a 1, cs 2, fs 2]
-c_4 = c_template [a 1, d 2, fs 2]
+c_3 = c_template [a 1, cs 1, fs 1]
+c_4 = c_template [a 1, d 1, fs 1]
 guitar_chord_2_var_template c = M.line [
   c dqn, dqnr
   ]
 
-guitar_chord_2_var_1 = guitar_chord_2_var_template c_3 +:+ accent 0.2 (guitar_chord_2_var_template c_3)
-guitar_chord_2_var_2 = guitar_chord_2_var_template c_4 +:+ accent 0.2 (guitar_chord_2_var_template c_4)
+guitar_chord_2_var_1 = guitar_chord_2_var_template c_3 +:+ accent 0.3 (guitar_chord_2_var_template c_3)
+guitar_chord_2_var_2 = guitar_chord_2_var_template c_4 +:+ accent 0.3 (guitar_chord_2_var_template c_4)
 
 guitar_chord_2 = M.replicate 6 guitar_chord_2_var_1 +:+ 
   M.replicate 1 guitar_chord_2_var_2 +:+ M.replicate 1 guitar_chord_2_var_1
 
 guitar_chord_track_1 = 
-  loudness1 0.4 $ play_with AcousticGuitarSteel guitar_chord_1
+  loudness1 0.6 $ play_with AcousticGuitarSteel guitar_chord_1
   
 guitar_chord_track_2 = 
-  loudness1 0.4 $ play_with ElectricGuitarMuted guitar_chord_2
+  loudness1 0.4 $ play_with ElectricGuitarClean guitar_chord_2
 
 
 -- helper
