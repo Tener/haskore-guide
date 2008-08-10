@@ -105,7 +105,43 @@ guitar_fill = M.line $ [
   ] ++ P.concat (P.replicate 2 [guitar_fill_common, guitar_fill_var_2])
   
 guitar_fill_track = loudness1 0.9 $ play_with AcousticGuitarNylon guitar_fill
+
+
+-- guitar chord
+c_template xs d = M.chord $ map (\n -> n d () ) xs
+c_1 = c_template [fs 1, a 1, cs 2]
+c_2 = c_template [fs 1, a 1, d 2]
+
+guitar_chord_1_var_template c = M.line [
+  rest (3 %+ 8 - t ), c t, c (3 %+ 8 - t ), c t   
+  ]
+  where t = 3 %+ 24
   
+guitar_chord_1_var_1 = guitar_chord_1_var_template c_1
+guitar_chord_1_var_2 = guitar_chord_1_var_template c_2
+
+guitar_chord_1 = M.replicate 12 guitar_chord_1_var_1 +:+ 
+  M.replicate 2 guitar_chord_1_var_2 +:+ M.replicate 2 guitar_chord_1_var_1
+
+c_3 = c_template [a 1, cs 2, fs 2]
+c_4 = c_template [a 1, d 2, fs 2]
+guitar_chord_2_var_template c = M.line [
+  c dqn, dqnr
+  ]
+
+guitar_chord_2_var_1 = guitar_chord_2_var_template c_3 +:+ accent 0.2 (guitar_chord_2_var_template c_3)
+guitar_chord_2_var_2 = guitar_chord_2_var_template c_4 +:+ accent 0.2 (guitar_chord_2_var_template c_4)
+
+guitar_chord_2 = M.replicate 6 guitar_chord_2_var_1 +:+ 
+  M.replicate 1 guitar_chord_2_var_2 +:+ M.replicate 1 guitar_chord_2_var_1
+
+guitar_chord_track_1 = 
+  loudness1 0.4 $ play_with AcousticGuitarSteel guitar_chord_1
+  
+guitar_chord_track_2 = 
+  loudness1 0.4 $ play_with ElectricGuitarMuted guitar_chord_2
+
+
 -- helper
 drum_enum = export_to' "wow_3" 1 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
 wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
@@ -113,8 +149,12 @@ wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, b
 wow_4 = export_to' "wow_3" 4 $ changeTempo 3 $ chord [flute_track, drum_track, base_track, guitar_base_track] 
 wow_5 = export_to' "wow_3" 5 $ changeTempo 3 $ chord
   [flute_track, drum_track, base_track, guitar_base_track, guitar_fill_track]
+  
+wow_6 = export_to' "wow_3" 6 $ changeTempo 3 $ chord
+  [flute_track, drum_track, base_track, guitar_base_track, 
+  guitar_fill_track, guitar_chord_track_1, guitar_chord_track_2]
 
-drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ guitar_fill_track
+drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ guitar_chord_track_2
 
 main = do
   drum_enum
@@ -122,5 +162,5 @@ main = do
   wow_3
   wow_4
   wow_5
+  wow_6
   drum_test
-
