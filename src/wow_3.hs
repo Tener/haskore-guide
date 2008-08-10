@@ -82,7 +82,7 @@ wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
 
 -- base
-base = M.replicate 16 $ play_with Cello $ fs (-2) 3 ()
+base = M.replicate 4 $ play_with Cello $ fs (-2) 3 ()
 base_track = accent (- 0.2) base
 
 wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track] 
