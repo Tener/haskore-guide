@@ -208,6 +208,6 @@ Add two more guitars
 
 [with guitar chords](../midi/wow_3/wow_3_6.midi?raw=true)
 
-This concludes our experiment with the Tavern melody in World of Warcraft :)
+Though there are way too many things could be improved here, we switch our attention to another cool aspect of Haskore, so we can create music more easily and elegantly.
 
 ## [DSLs for music](music_dsl.markdown)
