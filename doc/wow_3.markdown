@@ -91,3 +91,39 @@ Let's hear what general midi offers:
 	drum_enum = export_to' "wow_3" 2 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
 
 [GM Drums](../midi/wow_3/wow_3_1.midi?raw=true)
+
+Now we build our naive drum track
+
+	drum = Drum.toMusicDefaultAttr
+
+	drum_1 = M.replicate 8 $ M.line [
+	  drum OpenHiConga qn,
+	  drum LowConga hn,
+	  accent (- 0.3) $ drum LowFloorTom qn,
+	  drum LowConga hn
+	  ]
+
+	drum_2_var_1 = [
+	  drum LowBongo dqn,
+	  drum LowBongo dqn,
+	  drum LowBongo hn,
+	  rest (1 %+ 12),
+	  drum LowConga (2 %+ 12)
+	  ]
+
+	drum_2_var_2 = [
+	  drum LowBongo en
+	  ] ++ P.replicate 5 (drum LowConga en) ++ [
+	  drum LowBongo hn,
+	  rest (1 %+ 12),
+	  drum LowConga (2 %+ 12)
+	  ]
+
+	drum_2 =  (+:+) sfnr $ accent (- 0.2) $ M.replicate 2 $ M.line . concat $
+	  P.replicate 2 drum_2_var_1 ++ [drum_2_var_2] ++ [drum_2_var_1] 
+
+	drum_track = accent (- 0.1) $ drum_1 =:= drum_2
+
+	wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
+
+[flute with drums](../midi/wow_3/wow_3_2.midi?raw?true)
