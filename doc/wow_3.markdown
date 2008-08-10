@@ -65,7 +65,7 @@ from Melody
 
 	note :: Pitch.T -> Duration.T -> attr -> T attr
 
-Instead of providing a pitch value, we provide an instrument-name for drums.
+Instead of providing a pitch value for melody, we provide an instrument-name for drum.
 
 For a piano, it makes sense to talk about melodies and chords. This does not apply for most of drums. Give me a C chord in snares does not make sense. So a drum instrument is in fact a drum set. You can put many different drums in this set ( assigning C 1 to be a snare drum, D 1 to be a triangle, etc ).
 
@@ -78,5 +78,7 @@ from Sound.MIDI.General
 	      | BassDrum1         -- Midi Key 36
 	      | SideStick         -- ...
 	      | AcousticSnare | HandClap      | ElectricSnare | LowFloorTom
+	      | ClosedHiHat   | HighFloorTom  | PedalHiHat    | LowTom
+	      | OpenHiHat     | LowMidTom     | HiMidTom      | CrashCymbal1
 		  ...
 
