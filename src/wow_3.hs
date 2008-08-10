@@ -81,10 +81,17 @@ drum_track = accent (- 0.1) $ drum_1 =:= drum_2
 wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
 
+-- base
+base = M.replicate 16 $ play_with Cello $ fs (-2) 3 ()
+base_track = accent (- 0.2) base
+
+wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track] 
+
 -- helper
-drum_test = export_to' "wow_3" 3 $ changeTempo 3 drum_2
+drum_test = export_to' "wow_3" 9 $ changeTempo 3 base
 main = do
   drum_enum
   wow_2
+  wow_3
   drum_test
 

@@ -33,7 +33,7 @@ and in Music.Rhythmic
 See? Midi.T transforms back to (seriously need a better word ...) Music.T. This is even better then duck typing.
 
 
-Adding a drum Track
+Add a drum Track
 --------------------
 
 from Example.Miscellanerous
@@ -127,3 +127,13 @@ Now we build our naive drum track
 	wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
 [flute with drums](../midi/wow_3/wow_3_2.midi?raw=true)
+
+Add a base track
+-----------------
+
+	base = M.replicate 16 $ play_with Cello $ fs (-2) 3 ()
+	base_track = accent (- 0.2) base
+
+	wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track]
+
+[with base](../midi/wow_3/wow_3_3.midi?raw=true)
