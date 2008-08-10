@@ -122,7 +122,7 @@ Now we build our naive drum track
 	drum_2 =  (+:+) sfnr $ loudness1 0.6 $ M.replicate 2 $ M.line . concat $
 	  [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
-	drum_track = drum_1 =:= drum_2
+	drum_track = loudness1 1.5 $ drum_1 =:= drum_2
 
 	wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
@@ -142,11 +142,11 @@ Add two guitars
 ----------------
 
 	-- guitar_base
-	guitar_base = M.line $ map (\n -> n 1 dwn ()) [
+	guitar_base = M.line $ map (\n -> n 1 (wn + dqn) () +:+ enr) [
 	  cs, cs, cs, cs, cs, cs, d, cs
 	  ]
 
-	guitar_base_track = accent 0.3 $ play_with AcousticGuitarNylon guitar_base
+	guitar_base_track = accent 0.6 $ play_with AcousticGuitarNylon guitar_base
 
 	-- guitar fill
 	guitar_fill_common = M.line [
@@ -157,15 +157,15 @@ Add two guitars
 	guitar_fill_var_2 = e 1 qn ()
 
 	guitar_fill = M.line $ [
-	  guitar_fill_common, accent 0.5 guitar_fill_var_1,
+	  guitar_fill_common, accent 0.4 guitar_fill_var_1,
 	  guitar_fill_common, guitar_fill_var_2,
-	  guitar_fill_common, accent 0.1 guitar_fill_var_1,
+	  guitar_fill_common, accent 0.3 guitar_fill_var_1,
 	  guitar_fill_common, guitar_fill_var_2,
 	  guitar_fill_common, accent 0.4 guitar_fill_var_1,
 	  guitar_fill_common, guitar_fill_var_2
 	  ] ++ P.concat (P.replicate 2 [guitar_fill_common, guitar_fill_var_2])
 
-	guitar_fill_track = play_with AcousticGuitarNylon guitar_fill
+	guitar_fill_track = loudness1 0.9 $ play_with AcousticGuitarNylon guitar_fill
 	
 	wow_5 = export_to' "wow_3" 5 $ changeTempo 3 $ chord
 	  [flute_track, drum_track, base_track, guitar_base_track, guitar_fill_track]
