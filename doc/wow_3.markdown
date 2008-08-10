@@ -99,7 +99,7 @@ Now we build our naive drum track
 	drum_1 = M.replicate 8 $ M.line [
 	  drum OpenHiConga qn,
 	  drum LowConga hn,
-	  accent (- 0.3) $ drum LowFloorTom qn,
+	  loudness1 0.5 $ drum LowFloorTom qn,
 	  drum LowConga hn
 	  ]
 
@@ -119,10 +119,10 @@ Now we build our naive drum track
 	  drum LowConga (2 %+ 12)
 	  ]
 
-	drum_2 =  (+:+) sfnr $ accent (- 0.2) $ M.replicate 2 $ M.line . concat $
-	  [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1]
+	drum_2 =  (+:+) sfnr $ loudness1 0.6 $ M.replicate 2 $ M.line . concat $
+	  [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
-	drum_track = accent (- 0.1) $ drum_1 =:= drum_2
+	drum_track = drum_1 =:= drum_2
 
 	wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
@@ -132,8 +132,44 @@ Add a base track
 -----------------
 
 	base = play_with Cello $ fs (-2) 12 ()
-	base_track = accent (- 0.2) base
+	base_track = loudness1 0.8 base
 
 	wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track]
 
 [with base](../midi/wow_3/wow_3_3.midi?raw=true)
+
+Add two guitars
+----------------
+
+	-- guitar_base
+	guitar_base = M.line $ map (\n -> n 1 dwn ()) [
+	  cs, cs, cs, cs, cs, cs, d, cs
+	  ]
+
+	guitar_base_track = accent 0.3 $ play_with AcousticGuitarNylon guitar_base
+
+	-- guitar fill
+	guitar_fill_common = M.line [
+	  qnr, fs 1 en (), fs 1 en (), enr, fs 1 en (), fs 1 qn (), fs 1 qn ()
+	  ]
+
+	guitar_fill_var_1 = gs 1 qn ()
+	guitar_fill_var_2 = e 1 qn ()
+
+	guitar_fill = M.line $ [
+	  guitar_fill_common, accent 0.5 guitar_fill_var_1,
+	  guitar_fill_common, guitar_fill_var_2,
+	  guitar_fill_common, accent 0.1 guitar_fill_var_1,
+	  guitar_fill_common, guitar_fill_var_2,
+	  guitar_fill_common, accent 0.4 guitar_fill_var_1,
+	  guitar_fill_common, guitar_fill_var_2
+	  ] ++ P.concat (P.replicate 2 [guitar_fill_common, guitar_fill_var_2])
+
+	guitar_fill_track = play_with AcousticGuitarNylon guitar_fill
+	
+	wow_5 = export_to' "wow_3" 5 $ changeTempo 3 $ chord
+	  [flute_track, drum_track, base_track, guitar_base_track, guitar_fill_track]
+
+FIXME: I'm starting to experience random loss of notes in generated midi, for reasons unclear.
+
+[with guitar melodies](../midi/wow_3/wow_3_5.midi?raw=true)

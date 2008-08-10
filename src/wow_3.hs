@@ -46,14 +46,12 @@ flute = map (\x -> x ()) $
 flute_track = transpose octave $ play_with PanFlute $ line flute
 
 -- drums
-drum_enum = export_to' "wow_3" 1 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
-
 drum = Drum.toMusicDefaultAttr
 
 drum_1 = M.replicate 8 $ M.line [
   drum OpenHiConga qn,
   drum LowConga hn,
-  accent (- 0.3) $ drum LowFloorTom qn,
+  loudness1 0.5 $ drum LowFloorTom qn,
   drum LowConga hn
   ]
 
@@ -73,25 +71,56 @@ drum_2_var_2 = [
   drum LowConga (2 %+ 12)
   ]
 
-drum_2 =  (+:+) sfnr $ accent (- 0.2) $ M.replicate 2 $ M.line . concat $
+drum_2 =  (+:+) sfnr $ loudness1 0.6 $ M.replicate 2 $ M.line . concat $
   [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
 drum_track = drum_1 =:= drum_2
 
-wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
-
-
 -- base
-base = play_with Cello $ fs (-2) 12 ()
-base_track = accent (- 0.2) base
+base = fs (-2) 12 ()
+base_track = loudness1 0.6 $ play_with Cello base
 
-wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track] 
+-- guitar_base
+guitar_base = M.line $ map (\n -> n 1 dwn ()) [
+  cs, cs, cs, cs, cs, cs, d, cs
+  ]
 
+guitar_base_track = accent 0.3 $ play_with AcousticGuitarNylon guitar_base
+
+-- guitar fill
+guitar_fill_common = M.line [
+  qnr, fs 1 en (), fs 1 en (), enr, fs 1 en (), fs 1 qn (), fs 1 qn ()
+  ]
+
+guitar_fill_var_1 = gs 1 qn ()
+guitar_fill_var_2 = e 1 qn ()
+
+guitar_fill = M.line $ [
+  guitar_fill_common, accent 0.5 guitar_fill_var_1,
+  guitar_fill_common, guitar_fill_var_2,
+  guitar_fill_common, accent 0.1 guitar_fill_var_1,
+  guitar_fill_common, guitar_fill_var_2,
+  guitar_fill_common, accent 0.4 guitar_fill_var_1,
+  guitar_fill_common, guitar_fill_var_2
+  ] ++ P.concat (P.replicate 2 [guitar_fill_common, guitar_fill_var_2])
+  
+guitar_fill_track = play_with AcousticGuitarNylon guitar_fill
+  
 -- helper
-drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ flute_track =:= drum_track
+drum_enum = export_to' "wow_3" 1 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
+wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
+wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track] 
+wow_4 = export_to' "wow_3" 4 $ changeTempo 3 $ chord [flute_track, drum_track, base_track, guitar_base_track] 
+wow_5 = export_to' "wow_3" 5 $ changeTempo 3 $ chord
+  [flute_track, drum_track, base_track, guitar_base_track, guitar_fill_track]
+
+drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ guitar_fill_track
+
 main = do
   drum_enum
   wow_2
   wow_3
+  wow_4
+  wow_5
   drum_test
 
