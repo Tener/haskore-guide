@@ -43,7 +43,7 @@ flute = map (\x -> x ()) $
     flute_var_3
     ]
 
-flute_track = transpose octave $ play_with PanFlute $ line flute
+flute_track = loudness1 0.9 $ transpose octave $ play_with PanFlute $ line flute
 
 -- drums
 drum = Drum.toMusicDefaultAttr
@@ -74,11 +74,11 @@ drum_2_var_2 = [
 drum_2 =  (+:+) sfnr $ loudness1 0.6 $ M.replicate 2 $ M.line . concat $
   [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
-drum_track = loudness1 1.5 $ drum_1 =:= drum_2
+drum_track = loudness1 1.7 $ drum_1 =:= drum_2
 
 -- base
 base = fs (-2) 12 ()
-base_track = loudness1 0.6 $ play_with Cello base
+base_track = loudness1 0.8 $ play_with Cello base
 
 -- guitar_base
 guitar_base = M.line $ map (\n -> n 1 (wn + dqn) () +:+ enr) [

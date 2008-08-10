@@ -122,7 +122,7 @@ Now we build our naive drum track
 	drum_2 =  (+:+) sfnr $ loudness1 0.6 $ M.replicate 2 $ M.line . concat $
 	  [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
-	drum_track = loudness1 1.5 $ drum_1 =:= drum_2
+	drum_track = loudness1 1.7 $ drum_1 =:= drum_2
 
 
 [with drums](../midi/wow_3/wow_3_2.midi?raw=true)
@@ -208,6 +208,6 @@ Add two more guitars
 
 [with guitar chords](../midi/wow_3/wow_3_6.midi?raw=true)
 
-Though there are way too many things could be improved here, we switch our attention to another cool aspect of Haskore, so we can create music more easily and elegantly.
+Though there are way too many things should be fixed / improved here, we switch our attention to another cool aspect of Haskore, so we can create music more easily and elegantly.
 
 ## [DSLs for music](music_dsl.markdown)
