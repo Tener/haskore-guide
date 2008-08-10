@@ -30,7 +30,7 @@ flute_var_2 = [
 flute_var_3 = [
   flute_accent_low . (a 1 qn),  fs 1 qn, staccato en . (a 1 qn), 
     b 1 dqn, a 1 en, staccato en . (gs 1 qn), fs 1 dwn
-    ]
+  ]
 
 flute = map (\x -> x ()) $ 
   concat [
@@ -76,19 +76,19 @@ drum_2_var_2 = [
 drum_2 =  (+:+) sfnr $ accent (- 0.2) $ M.replicate 2 $ M.line . concat $
   [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
-drum_track = accent (- 0.1) $ drum_1 =:= drum_2
+drum_track = drum_1 =:= drum_2
 
 wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
 
 
 -- base
-base = M.replicate 4 $ play_with Cello $ fs (-2) 3 ()
+base = play_with Cello $ fs (-2) 12 ()
 base_track = accent (- 0.2) base
 
 wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track] 
 
 -- helper
-drum_test = export_to' "wow_3" 9 $ changeTempo 3 base
+drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ flute_track =:= drum_track
 main = do
   drum_enum
   wow_2

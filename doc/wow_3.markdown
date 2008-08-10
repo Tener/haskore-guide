@@ -131,7 +131,7 @@ Now we build our naive drum track
 Add a base track
 -----------------
 
-	base = M.replicate 4 $ play_with Cello $ fs (-2) 3 ()
+	base = play_with Cello $ fs (-2) 12 ()
 	base_track = accent (- 0.2) base
 
 	wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, base_track]
