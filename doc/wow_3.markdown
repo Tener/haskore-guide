@@ -107,8 +107,8 @@ Now we build our naive drum track
 	  drum LowBongo dqn,
 	  drum LowBongo dqn,
 	  drum LowBongo hn,
-	  rest (1 %+ 12),
-	  drum LowConga (2 %+ 12)
+	  enr,
+	  drum LowConga en
 	  ]
 
 	drum_2_var_2 = [
