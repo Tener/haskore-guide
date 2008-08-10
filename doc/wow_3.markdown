@@ -169,8 +169,6 @@ FIXME: I'm starting to experience random loss of notes in generated midi, for re
 
 [with guitar melodies](../midi/wow_3/wow_3_5.midi?raw=true)
 
-
-
 Add two more guitars
 ---------------------
 
@@ -209,3 +207,7 @@ Add two more guitars
 	  loudness1 0.4 $ play_with ElectricGuitarMuted guitar_chord_2
 
 [with guitar chords](../midi/wow_3/wow_3_6.midi?raw=true)
+
+This concludes our experiment with the Tavern melody in World of Warcraft :)
+
+## [DSLs for music](music_dsl.markdown)

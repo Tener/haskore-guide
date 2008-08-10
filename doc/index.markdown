@@ -20,6 +20,8 @@ Index
 
 ## [Theme music from the World of Warcraft 3 ( multitrack )](wow_3.markdown)
 
+## [DSLs for music](music_dsl.markdown)
+
 Links
 ======
 
