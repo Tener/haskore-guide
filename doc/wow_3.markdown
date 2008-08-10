@@ -33,8 +33,8 @@ and in Music.Rhythmic
 See? Midi.T transforms back to (seriously need a better word ...) Music.T. This is even better then duck typing.
 
 
-Adding Drum Track
-------------------
+Adding a drum Track
+--------------------
 
 from Example.Miscellanerous
 
@@ -67,9 +67,9 @@ from Melody
 
 Instead of providing a pitch value, we provide an instrument-name for drums.
 
-For a piano instrument, it makes sence to form a melody, or a chord. This does not apply for most of drums. Give me a c chord in snares does not make sense. So an instrument of drum is a drum set. You can assign different drum instruments in this set ( assigning c on octave 1 to be snare drum ).
+For a piano, it makes sense to talk about melodies and chords. This does not apply for most of drums. Give me a c chord in snares does not make sense. So a drum instrument is in fact a drum set. You can put many different drums in this set ( assigning c 1 to be a snare drum, d 1 to be a triangle, etc ).
 
-General midi provide a default drum set, so we have a standard drum mapping table.
+General midi provides a default drum set, so we have a standard drum mapping table.
 
 from Sound.MIDI.General
 
