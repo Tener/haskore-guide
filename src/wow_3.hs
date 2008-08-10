@@ -1,4 +1,4 @@
-module Wow2 where
+module Wow3 where
 
 import Haskore.Melody
 import Haskore.Music as M
@@ -141,7 +141,6 @@ guitar_chord_track_1 =
 guitar_chord_track_2 = 
   loudness1 0.4 $ play_with ElectricGuitarClean guitar_chord_2
 
-
 -- helper
 drum_enum = export_to' "wow_3" 1 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
 wow_2 = export_to' "wow_3" 2 $ changeTempo 3 $ flute_track =:= drum_track
@@ -149,10 +148,11 @@ wow_3 = export_to' "wow_3" 3 $ changeTempo 3 $ chord [flute_track, drum_track, b
 wow_4 = export_to' "wow_3" 4 $ changeTempo 3 $ chord [flute_track, drum_track, base_track, guitar_base_track] 
 wow_5 = export_to' "wow_3" 5 $ changeTempo 3 $ chord
   [flute_track, drum_track, base_track, guitar_base_track, guitar_fill_track]
-  
+
 wow_6 = export_to' "wow_3" 6 $ changeTempo 3 $ chord
   [flute_track, drum_track, base_track, guitar_base_track, 
   guitar_fill_track, guitar_chord_track_1, guitar_chord_track_2]
+
 
 drum_test = export_to' "wow_3" 9 $ changeTempo 3 $ guitar_chord_track_2
 
