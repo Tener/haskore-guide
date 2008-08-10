@@ -113,7 +113,7 @@ c_1 = c_template [fs 1, a 1, cs 2]
 c_2 = c_template [fs 1, a 1, d 2]
 
 guitar_chord_1_var_template c = M.line [
-  rest (3 %+ 8 - t ), c t, c (3 %+ 8 - t ), c t   
+  rest (3 %+ 8 - t ), accent (- 0.4) $ c t, c (3 %+ 8 - t ), accent (- 0.4) $ c t   
   ]
   where t = 3 %+ 24
   
