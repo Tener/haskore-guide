@@ -152,7 +152,7 @@ Add two guitars
 	  ]
 
 	guitar_fill_var_1 = gs 1 qn ()
-	guitar_fill_var_2 = e 1 qn ()
+	guitar_fill_var_2 = accent 0.1 $ e 1 qn ()
 
 	guitar_fill = M.line $ [
 	  guitar_fill_common, accent 0.4 guitar_fill_var_1,
@@ -163,7 +163,7 @@ Add two guitars
 	  guitar_fill_common, guitar_fill_var_2
 	  ] ++ P.concat (P.replicate 2 [guitar_fill_common, guitar_fill_var_2])
 
-	guitar_fill_track = loudness1 0.9 $ play_with AcousticGuitarNylon guitar_fill
+	guitar_fill_track = loudness1 1.1 $ play_with AcousticGuitarNylon guitar_fill
 
 FIXME: I'm starting to experience random loss of notes in generated midi, for reasons unclear.
 
@@ -194,8 +194,8 @@ Add two more guitars
 	  c dqn, dqnr
 	  ]
 
-	guitar_chord_2_var_1 = guitar_chord_2_var_template c_3 +:+ accent 0.2 (guitar_chord_2_var_template c_3)
-	guitar_chord_2_var_2 = guitar_chord_2_var_template c_4 +:+ accent 0.2 (guitar_chord_2_var_template c_4)
+	guitar_chord_2_var_1 = guitar_chord_2_var_template c_3 +:+ accent 0.1 (guitar_chord_2_var_template c_3)
+	guitar_chord_2_var_2 = guitar_chord_2_var_template c_4 +:+ accent 0.1 (guitar_chord_2_var_template c_4)
 
 	guitar_chord_2 = M.replicate 6 guitar_chord_2_var_1 +:+ 
 	  M.replicate 1 guitar_chord_2_var_2 +:+ M.replicate 1 guitar_chord_2_var_1
@@ -204,7 +204,7 @@ Add two more guitars
 	  loudness1 0.4 $ play_with AcousticGuitarSteel guitar_chord_1
 
 	guitar_chord_track_2 = 
-	  loudness1 0.3 $ play_with ElectricGuitarClean guitar_chord_2
+	  loudness1 0.2 $ play_with ElectricGuitarClean guitar_chord_2
 
 [with guitar chords](../midi/wow_3/wow_3_6.midi?raw=true)
 
