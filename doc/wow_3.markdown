@@ -33,4 +33,50 @@ and in Music.Rhythmic
 See? Midi.T transforms back to (seriously need a better word ...) Music.T. This is even better then duck typing.
 
 
->tbc
+Adding Drum Track
+------------------
+
+from Example.Miscellanerous
+
+	import qualified Haskore.Interface.MIDI.Render       as Render
+	import           Haskore.Composition.Drum  as Drum
+
+	t14 = Render.generalMidiDeflt (Drum.toMusicDefaultAttr AcousticSnare qn)
+
+It generates a single snare drum beat.
+
+from Render
+
+	generalMidiDeflt :: MidiMusic.T -> MidiFile.T
+
+from Drum
+	
+	toMusic :: drum -> Duration.T -> NoteAttributes -> RhyMusic.T drum instr
+	toMusic drm dr nas =
+	   Music.atom dr (Just (RhyMusic.noteFromAttrs nas (RhyMusic.Drum drm)))
+    
+	toMusicDefaultAttr ::
+	   drum -> Duration.T -> RhyMusic.T drum instr
+	toMusicDefaultAttr drm dr = toMusic drm dr na
+	
+So we use `toMusic` or `toMusicDefaultAttr` function to generate drums. You might have noticed that there is something different then how we generate from melody. Let's recap:
+
+from Melody
+
+	note :: Pitch.T -> Duration.T -> attr -> T attr
+
+Instead of providing a pitch value, we provide an instrument-name for drums.
+
+For a piano instrument, it makes sence to form a melody, or a chord. This does not apply for most of drums. Give me a c chord in snares does not make sense. So an instrument of drum is a drum set. You can assign different drum instruments in this set ( assigning c on octave 1 to be snare drum ).
+
+General midi provide a default drum set, so we have a standard drum mapping table.
+
+from Sound.MIDI.General
+
+	data Drum =
+	        AcousticBassDrum  -- Midi Key 35
+	      | BassDrum1         -- Midi Key 36
+	      | SideStick         -- ...
+	      | AcousticSnare | HandClap      | ElectricSnare | LowFloorTom
+		  ...
+
