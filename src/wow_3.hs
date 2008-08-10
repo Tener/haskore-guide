@@ -74,7 +74,7 @@ drum_2_var_2 = [
   ]
 
 drum_2 =  (+:+) sfnr $ accent (- 0.2) $ M.replicate 2 $ M.line . concat $
-  P.replicate 2 drum_2_var_1 ++ [drum_2_var_2] ++ [drum_2_var_1] 
+  [drum_2_var_1, drum_2_var_1, drum_2_var_2, drum_2_var_1] 
 
 drum_track = accent (- 0.1) $ drum_1 =:= drum_2
 
