@@ -59,7 +59,7 @@ from Drum
 	   drum -> Duration.T -> RhyMusic.T drum instr
 	toMusicDefaultAttr drm dr = toMusic drm dr na
 	
-So we use `toMusic` or `toMusicDefaultAttr` function to generate drums. You might have noticed that there is something different then how we generate from melody. Let's recap:
+So we use `toMusic` or `toMusicDefaultAttr` to generate drums. You might have noticed that there is something different then how we generate from melody. Let's recap:
 
 from Melody
 
@@ -82,3 +82,12 @@ from Sound.MIDI.General
 	      | OpenHiHat     | LowMidTom     | HiMidTom      | CrashCymbal1
 		  ...
 
+
+Let's hear what general midi offers:
+	
+	import Haskore.Composition.Drum  as Drum
+	import Sound.MIDI.General as MIDI
+	
+	drum_enum = export_to' "wow_3" 2 $ M.line $ map (\d ->  Drum.toMusicDefaultAttr d en) MIDI.drums
+
+[GM Drums](../midi/wow_3/wow_3_1.midi?raw=true)
