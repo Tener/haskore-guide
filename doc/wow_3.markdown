@@ -213,6 +213,6 @@ Further tweaks
 ---------------
 
 
-Though there are way too many things should be fixed / improved here (e.g. there's a strange pipe like sound on every starting beat ...), we switch our attention to another cool aspect of Haskore, so we can create music more easily and elegantly.
+Though there are way too many things should be fixed / improved here, we switch our attention to another cool aspect of Haskore, so we can create music more easily and elegantly.
 
 ## [DSLs for music](music_dsl.markdown)
