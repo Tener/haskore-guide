@@ -1,9 +1,13 @@
 Installation
 =============
 
+### before everything
+
+Haskore is evolving, try the method on [haskell wiki](http://www.haskell.org/haskellwiki/Haskore) first, which is supposed to work for windows / unix. Haskore didn't build on windows at the time this guide was written, so only use this guide as a reference.
+
 ### requirements
 
-* Haskore won't build on Windows, yet.
+* This process will not work under Windows, follow [the guide on haskell wiki](http://www.haskell.org/haskellwiki/Haskore) ( I don't know if it works for windows, yet).
 * This process has been reported to be successful under Ubuntu Linux and MacOSX Leopard. 
 
 ### install GHC-6.8.3
