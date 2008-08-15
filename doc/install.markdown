@@ -79,7 +79,7 @@ The zip package on Haskore homepage won't work on ghc-6.8.3! You need the darcs 
 
 	-- system commands
 	
-	darcs1 --partial http://darcs.haskell.org/haskore/ 
+	darcs1 get --partial http://darcs.haskell.org/haskore/ 
 
 ### Test install
 
