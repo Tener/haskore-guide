@@ -18,11 +18,16 @@ If you're not familiar with cabal, here's a [quick start](http://www.haskell.org
 
 ### get cabal-install
 
+	-- system commands
+	
 	wget http://hackage.haskell.org/packages/archive/cabal-install/0.5.2/cabal-install-0.5.2.tar.gz
 	tar -zxf cabal-install-0.5.2.tar.gz 
 	cd cabal-install-0.5.2
 	./bootstrap.sh 
 
+	-- after adding ~/.cabal/bin to $PATH
+	cabal update
+	
 ### install stock-cabal packages
 
 	-- system commands
