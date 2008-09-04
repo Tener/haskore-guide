@@ -18,27 +18,10 @@ If you're not familiar with cabal, here's a [quick start](http://www.haskell.org
 
 ### get cabal-install
 
-I recommend installing [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall) in user space, so all your cabal packages don't require admin privilege.
-
-Note 1: you might need to manually get other _cabal packages_ that cabal-install depends on as well, e.g. HTTP, zlib, etc. cabal-install will notify you during installation on which packages you need to get. You can find them in [Hackage](http://hackage.haskell.org/packages/archive/pkg-list.html).
-
-Note 2: You get `cabal` binary after installing `cabal-install`. You can view all your installed packages using `ghc-pkg list`. Use `ghc-pkg help` to get more information on package management.
-
-Note 3: Super quick start on installing cabal packages (without `cabal-install` installed). This is the way to install `cabal-install` itself, and other packages that can't be installed using `cabal-install`.
-
-	-- system commands
-	
-	cd $package_dir
-	
-	runghc Setup.hs configure
-	runghc Setup.hs build
-	runghc Setup.hs install
-	
-	-- If you prefer install them in user-space, use
-
-	runghc Setup.hs configure --user --prefix=$HOME
-	runghc Setup.hs build
-	runghc Setup.hs install
+	wget http://hackage.haskell.org/packages/archive/cabal-install/0.5.2/cabal-install-0.5.2.tar.gz
+	tar -zxf cabal-install-0.5.2.tar.gz 
+	cd cabal-install-0.5.2
+	./bootstrap.sh 
 
 ### install stock-cabal packages
 
@@ -61,6 +44,22 @@ you need the following packages exactly. ( Haskore needs these older versions to
 	
 	http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
 	http://hackage.haskell.org/packages/archive/hsc3/0.1.1/hsc3-0.1.1.tar.gz
+	
+steps to install custom / darcs packages:
+
+	-- system commands
+	
+	cd $package_dir
+	
+	runghc Setup.hs configure
+	runghc Setup.hs build
+	runghc Setup.hs install
+	
+	-- If you prefer install them in user-space, use
+
+	runghc Setup.hs configure --user --prefix=$HOME
+	runghc Setup.hs build
+	runghc Setup.hs install
 	
 ### install darcs packages
 
