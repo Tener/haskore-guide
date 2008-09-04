@@ -38,6 +38,7 @@ If you're not familiar with cabal, here's a [quick start](http://www.haskell.org
 	cabal install non-negative
 	cabal install unix
 	cabal install binary
+	cabal install data-accessor
 
 Note: run `cabal help install` to get more information, e.g. `--global` to force install in root space.
 
@@ -47,8 +48,8 @@ you need the following packages exactly. ( Haskore needs these older versions to
 
 	-- fetch urls
 	
-	http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
-	http://hackage.haskell.org/packages/archive/hsc3/0.1.1/hsc3-0.1.1.tar.gz
+	wget http://hackage.haskell.org/packages/archive/hosc/0.1/hosc-0.1.tar.gz
+	wget http://hackage.haskell.org/packages/archive/hsc3/0.1.1/hsc3-0.1.1.tar.gz
 	
 steps to install custom / darcs packages:
 
@@ -71,7 +72,6 @@ steps to install custom / darcs packages:
 	-- system commands
 	
 	darcs get http://darcs.haskell.org/supercollider-ht/
-	darcs get http://darcs.haskell.org/record-access/
 
 ### install Haskore
 
