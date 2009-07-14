@@ -6,7 +6,7 @@ Installation
 * This process might not work under Windows, follow [the guide on haskell wiki](http://www.haskell.org/haskellwiki/Haskore) ( I don't know if it works for windows, yet).
 * This process has been reported to be successful under Ubuntu Linux and MacOSX Leopard. 
 
-### install GHC
+### install [GHC](http://www.haskell.org/ghc/)
 
 ### install [cabal-install](http://hackage.haskell.org/trac/hackage/wiki/CabalInstall)
 	
