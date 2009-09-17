@@ -2,25 +2,25 @@ Index
 ======
 
 
-## [Installation](blob/master/doc/install.markdown)
+## [Installation](haskore-guide/blob/master/doc/install.markdown)
 
-## [Hello World](blob/master/doc/hello.markdown)
+## [Hello World](haskore-guide/blob/master/doc/hello.markdown)
 
-## [Note C](blob/master/doc/c.markdown)
+## [Note C](haskore-guide/blob/master/doc/c.markdown)
 
-## [C Major](blob/master/doc/c_major.markdown)
+## [C Major](haskore-guide/blob/master/doc/c_major.markdown)
 
-## [Music Test Generator](blob/master/doc/music_test.markdown)
+## [Music Test Generator](haskore-guide/blob/master/doc/music_test.markdown)
 
-## [Bach's Prelude 1 in C Major](blob/master/doc/bach_prelude.markdown)
+## [Bach's Prelude 1 in C Major](haskore-guide/blob/master/doc/bach_prelude.markdown)
 
-## [Theme music from the World of Warcraft 1 ( the music type and midi instruments )](blob/master/doc/wow_1.markdown)
+## [Theme music from the World of Warcraft 1 ( the music type and midi instruments )](haskore-guide/blob/master/doc/wow_1.markdown)
 
-## [Theme music from the World of Warcraft 2 ( music decorators )](blob/master/doc/wow_2.markdown)
+## [Theme music from the World of Warcraft 2 ( music decorators )](haskore-guide/blob/master/doc/wow_2.markdown)
 
-## [Theme music from the World of Warcraft 3 ( multitrack )](blob/master/doc/wow_3.markdown)
+## [Theme music from the World of Warcraft 3 ( multitrack )](haskore-guide/blob/master/doc/wow_3.markdown)
 
-## [DSLs for music](blob/master/doc/music_dsl.markdown)
+## [DSLs for music](haskore-guide/blob/master/doc/music_dsl.markdown)
 
 Links
 ======
