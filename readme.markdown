@@ -1,5 +1,8 @@
+Haskore Tutorial
+================
+
 Index
-======
+-----
 
 
 ## [Installation](haskore-guide/blob/master/doc/install.markdown)
@@ -23,7 +26,7 @@ Index
 ## [DSLs for music](haskore-guide/blob/master/doc/music_dsl.markdown)
 
 Links
-======
+-----
 
 * [Haskore](http://www.haskell.org/haskore/)
 * [http://www.haskell.org/tmrwiki/Haskore](http://www.haskell.org/tmrwiki/Haskore)
@@ -32,7 +35,7 @@ Links
 * [Haskore Live (Video Demo)](http://video.google.com/videoplay?docid=5849699036632847795)
 
 Patchs
-=======
+------
 
 * This is a git repo after all, patches welcome
 * otherwise, reach me at [nfjinjing@gmail.com](mailto:nfjinjing@gmail.com)
