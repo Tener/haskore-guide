@@ -1,3 +1,10 @@
+Note
+====
+
+This guide is deprecated and should only be used as a reference.
+
+I recommend Euterpea as an upgrade to Haskore. Search for it.
+
 Haskore Tutorial
 ================
 
